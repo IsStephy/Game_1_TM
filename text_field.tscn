@@ -10,22 +10,18 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_pmhq1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akigu"]
-bg_color = Color(1, 1, 1, 0.6)
+bg_color = Color(0.00578329, 0.112129, 0.280229, 0.615686)
 border_width_left = 5
 border_width_top = 40
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.809349, 0.912151, 0.98628, 0.501961)
+border_color = Color(0.12549, 0, 0.407843, 0.490196)
 border_blend = true
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="LabelSettings" id="LabelSettings_8yjp1"]
-font_size = 30
-font_color = Color(0.351563, 0.351563, 0.351563, 1)
-outline_size = 10
-shadow_size = 10000
+[sub_resource type="LabelSettings" id="LabelSettings_8eess"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_ohq7f"]
 script = ExtResource("5_j5op0")
@@ -46,7 +42,6 @@ grow_vertical = 2
 script = ExtResource("1_15y2e")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-modulate = Color(0.288479, 0.0912281, 0.668432, 1)
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 1
 anchors_preset = 12
@@ -54,9 +49,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = -240.0
+offset_top = -248.0
 offset_right = -40.0
-offset_bottom = -40.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_5nreh")
@@ -65,19 +60,17 @@ script = ExtResource("2_ep3ap")
 
 [node name="Polygon2D" type="Polygon2D" parent="PanelContainer"]
 position = Vector2(0, 70)
-color = Color(0.812235, 0.821811, 0.968419, 0.886275)
+color = Color(0.287001, 0.254595, 0.626443, 0.886275)
 offset = Vector2(0, -50)
 polygon = PackedVector2Array(0, 0, 300, 0, 340, -30, 300, -60, 0, -60)
 
 [node name="Label" type="Label" parent="PanelContainer/Polygon2D"]
-visibility_layer = 513
-z_index = 1
 offset_left = 4.0
 offset_top = -105.0
 offset_right = 296.0
 offset_bottom = -54.0
 text = " Name"
-label_settings = SubResource("LabelSettings_8yjp1")
+label_settings = SubResource("LabelSettings_8eess")
 horizontal_alignment = 1
 vertical_alignment = 1
 
