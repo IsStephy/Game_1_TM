@@ -301,14 +301,16 @@ var wait_for_input_continue = false
 
 @onready var textfield = self.get_parent()
 func center_dialogue():
-	options_vertical = true
+	options_container.top_level = true
+	var viewport_size = get_viewport_rect().size
 	options_container.anchor_left = 0.5
-	options_container.anchor_right = 0.5
 	options_container.anchor_top = 0.5
+	options_container.anchor_right = 0.5
 	options_container.anchor_bottom = 0.5
-	_on_dialogue_started
-	options_container.position.x = textfield.size.x / 2
-	options_container.position.y = -textfield.size.y / 2
+	options_container.vertical = true
+	options_container.position.x = viewport_size.x / 2 - options_container.size.x / 2
+	options_container.position.y = viewport_size.y / 2 * 0.5 - options_container.size.y / 2
+
 
 
 func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[String]):
@@ -350,6 +352,7 @@ func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[S
 
 	# Hide the container until the wait effect is finished
 	options_container.hide()
+	call_deferred("center_dialogue")
 	dialogue_processed.emit(speaker, dialogue, options)
 
 
