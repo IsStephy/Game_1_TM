@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://sn6yblxyfsi0"]
+
+[node name="BOBIK" type="Node2D"]
+
+[node name="Character" type="Sprite2D" parent="."]

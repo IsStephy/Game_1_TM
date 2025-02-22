@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bgs122mthgcln"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23ywf"]
+bg_color = Color(0.312848, 0.146704, 0.276294, 0.819608)
+border_width_top = 30
+border_color = Color(0.528885, 0.327162, 0.61587, 0.866667)
+border_blend = true
+
+[resource]
+/styles/box_color = SubResource("StyleBoxFlat_23ywf")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://db2au6q1cgaeq"]
+
+[ext_resource type="PackedScene" uid="uid://hhm0f2nhdcni" path="res://text_field.tscn" id="1_pu77l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextField" parent="CanvasLayer" instance=ExtResource("1_pu77l")]
