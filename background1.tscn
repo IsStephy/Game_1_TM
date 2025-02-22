@@ -6,6 +6,9 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="TextField" parent="CanvasLayer" instance=ExtResource("1_pu77l")]
+self_modulate = Color(1, 1, 1, 0.933333)
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,5 +16,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 expand_mode = 1
-
-[node name="TextField" parent="CanvasLayer" instance=ExtResource("1_pu77l")]
