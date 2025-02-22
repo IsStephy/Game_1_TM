@@ -14,3 +14,7 @@ config/name="Me_and_My_Absolutely_Normal_Family"
 run/main_scene="res://text_field.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
