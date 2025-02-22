@@ -24,7 +24,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_10": {
 "dialogue": "A sentimental item? Perfect. The luck of childhood innocence is on my side.",
@@ -37,7 +37,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_100": {
 "dialogue": "(Damn, let’s better not bring it up. Better try to get out.)",
@@ -63,7 +63,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_102": {
 "dialogue": "You know what, let’s try another time. I guess it can wait",
@@ -76,7 +76,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_103": {
 "dialogue": "Anyway, my friend Lolik, uhm…Called me to… Find some sticks good for beating the krapiva",
@@ -89,7 +89,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_104": {
 "dialogue": "(You just hope that this excuse works.)",
@@ -176,7 +176,7 @@ nodes = {
 "text": "3. Hide in Your Room"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": ""
 },
 "1_11": {
@@ -216,7 +216,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_112": {
 "dialogue": "We were just getting closer as a family.",
@@ -229,7 +229,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_113": {
 "dialogue": "Come give Mommy a kiss!",
@@ -242,7 +242,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "MOTHER"
+"speaker": 3
 },
 "1_114": {
 "dialogue": "(They attack.)",
@@ -294,7 +294,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_118": {
 "dialogue": "Studying hard today!",
@@ -307,7 +307,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_119": {
 "dialogue": "Pancakes, sweetheart?",
@@ -320,7 +320,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "MOTHER"
+"speaker": 3
 },
 "1_12": {
 "dialogue": "The economy is rigged",
@@ -333,7 +333,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_120": {
 "dialogue": "(You stare in horror. Were you dreaming? Or did they reset things?Did you take some of Suzies potions earlier?You have Dementia?)",
@@ -372,7 +372,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_14": {
 "dialogue": "(He loses. The screen flashes ‘DEBT OWED: ONE (1) CHILD’)",
@@ -398,7 +398,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_16": {
 "dialogue": "(You survived. You leave the room and enter the next one. This is your sister SUZIE’s room. It’s filled with lab equipment. A strong chemical odor fills the air.)",
@@ -411,7 +411,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": 1
 },
 "1_17": {
 "dialogue": "Wow, Suzie, what’s that smell?!",
@@ -424,7 +424,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_18": {
 "dialogue": "The smell of science. (She winks.)",
@@ -437,7 +437,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_19": {
 "dialogue": "Aren’t you like... failing chemistry?",
@@ -450,7 +450,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_2": {
 "dialogue": "Ah, my responsible son! Hard at work, making investments for the family’s future.",
@@ -463,7 +463,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_20": {
 "dialogue": "School chemistry, yeah. But this chemistry? Straight A’s, baby.",
@@ -476,7 +476,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_21": {
 "dialogue": "(She motions you closer to a bubbling mixture.)",
@@ -512,7 +512,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 322),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_23": {
 "dialogue": "(You grab the phone.)",
@@ -538,7 +538,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_25": {
 "dialogue": "(Police arrive in a few minuts. Suzie gets arrested.)",
@@ -564,7 +564,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_27": {
 "dialogue": "(You survive, but at what cost?
@@ -606,7 +606,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_3": {
 "dialogue": "(You sneek into the living room, where DADDY sits at the table, staring intensely at his laptop screen. He has a cigarette in one hand, a bottle of NOT ORANGE JUICE in the other.)",
@@ -645,7 +645,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_32": {
 "dialogue": "You susrvive.
@@ -685,7 +685,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_35": {
 "dialogue": "Means it’s working.",
@@ -698,7 +698,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_36": {
 "dialogue": "(You drink. Your vision distorts.)",
@@ -724,7 +724,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_38": {
 "dialogue": "That means the neurons are on fire! In a good way!",
@@ -737,7 +737,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "SUZIE"
+"speaker": 2
 },
 "1_39": {
 "dialogue": "(You pass out. When you wake up, you have no idea who you are. Suzie sells you to a gangster.)",
@@ -776,7 +776,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_41": {
 "dialogue": "Go away, sweetheart. Mommy’s busy",
@@ -789,7 +789,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "MOTHER"
+"speaker": 3
 },
 "1_42": {
 "dialogue": "(your next move is important for your family what you do?1: Knock on the Door)",
@@ -825,7 +825,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_44": {
 "dialogue": "Same thing. Now shoo, darling!",
@@ -838,7 +838,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "MOTHER"
+"speaker": 3
 },
 "1_45": {
 "dialogue": "(You leave and survive)",
@@ -877,7 +877,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_48": {
 "dialogue": "(You slam the door and run.)
@@ -917,7 +917,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_50": {
 "dialogue": "(The creature turns its many eyes toward you. Your mother smiles.)",
@@ -943,7 +943,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "MOTHER"
+"speaker": 3
 },
 "1_52": {
 "dialogue": "(The creature screeches. You begin transforming into one of them.)
@@ -983,7 +983,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_55": {
 "dialogue": "Oh, my dear, it’s an old family recipe! Sit down, sit down!",
@@ -996,7 +996,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_56": {
 "dialogue": "(She pours some stew into a bowl and hands it to you)",
@@ -1022,7 +1022,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_58": {
 "dialogue": "(You sip some of the stew. Wow! That’s one of the best stews that you ever tasted!)",
@@ -1048,7 +1048,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_6": {
 "dialogue": "Same thing, kiddo. Now listen, I need something valuable to bet. Hand over an item.",
@@ -1071,7 +1071,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 322),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_60": {
 "dialogue": "Oh, I knew you’d love it! Just like your dead Grandad used to!",
@@ -1084,7 +1084,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_61": {
 "dialogue": "(You pause. Something is off. The meat tastes a bit… strange)",
@@ -1110,7 +1110,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_63": {
 "dialogue": "Oh, please, kogda ya kushayu, ya gluh i nem. But don’t worry, it’s definetelly organic",
@@ -1123,7 +1123,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_64": {
 "dialogue": "(You lift your spoon. Something floats up. A human tooth. Ahuieti ne vstati.)",
@@ -1149,7 +1149,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_66": {
 "dialogue": "Oh, dear! I forgot to take it out! Oh, my dear retard husband… Worry not, he washed his teeth regularly",
@@ -1162,7 +1162,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_67": {
 "dialogue": "(You drop the spoon. Granny giggles sweetly)",
@@ -1179,7 +1179,7 @@ BOOM!
 },
 "1_68": {
 "dialogue": "...",
-"offset": Vector2(13901.1, -226.971),
+"offset": Vector2(13760, -440),
 "options": {
 0: {
 "condition": {},
@@ -1224,7 +1224,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_70": {
 "dialogue": "Now, now! No one leaves the table hungry! End your stew or no [b]blinciki[/b] ([I]Russian national dish, made of pancake dough, laid in layers and having different fillings[/I]) for you!",
@@ -1237,7 +1237,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_71": {
 "dialogue": "(Looking at the stew makes you sick. Granny hums happily)",
@@ -1263,7 +1263,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_73": {
 "dialogue": "Two friends meet at the bar. One tells to the other",
@@ -1276,7 +1276,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_74": {
 "dialogue": "Have you read the news? They recently caught a cannibal!",
@@ -1289,7 +1289,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_75": {
 "dialogue": "No way?! What gave him away?",
@@ -1302,7 +1302,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_76": {
 "dialogue": "He was selling pelimeni called \"My Family\"...",
@@ -1315,7 +1315,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_77": {
 "dialogue": "(I have to do something)",
@@ -1469,7 +1469,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_87": {
 "dialogue": "(You try to reach for the phone.)",
@@ -1508,7 +1508,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_9": {
 "dialogue": "I was hacked. Yep. That’s the only explanation.",
@@ -1521,7 +1521,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "DADDY"
+"speaker": 1
 },
 "1_90": {
 "dialogue": "Why are you calling 112? Did my stew make you criminally ill? Wait, I have here some aktivirovanyi ugoli.",
@@ -1534,7 +1534,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_91": {
 "dialogue": "Such a universal remedy, my mom used to heal rabbies of my brothers and sisters with it. Ironically, they didn’t survive. Such good memories.",
@@ -1547,7 +1547,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_92": {
 "dialogue": "(Seems that cops will never arrive)",
@@ -1573,7 +1573,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_94": {
 "dialogue": "Did I?",
@@ -1586,7 +1586,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_95": {
 "dialogue": "Yeah, something to do in the living room",
@@ -1599,7 +1599,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "BOBIK"
+"speaker": 0
 },
 "1_96": {
 "dialogue": "Hmm, maybe I just forgot… Let me try to recall it…",
@@ -1612,7 +1612,7 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 },
 "size": Vector2(300, 240),
-"speaker": "GRANNY"
+"speaker": 4
 },
 "1_97": {
 "dialogue": "(She takes you to the living room)",
@@ -1666,4 +1666,4 @@ The round or square chair, without a back[/i]) in the window.)",
 }
 variables = {}
 strays = Array[String]([])
-characters = ""
+characters = "res://Characters.tres"
