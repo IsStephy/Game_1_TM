@@ -1,27 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://hhm0f2nhdcni"]
+[gd_scene load_steps=10 format=3 uid="uid://hhm0f2nhdcni"]
 
-[ext_resource type="Theme" uid="uid://bgs122mthgcln" path="res://text_field_theme.tres" id="1_5nreh"]
 [ext_resource type="Script" path="res://text_field.gd" id="1_15y2e"]
-[ext_resource type="Script" path="res://panel_container.gd" id="2_ep3ap"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="3_5rssb"]
 [ext_resource type="Resource" uid="uid://80ompw780k36" path="res://dialog.tres" id="4_8383y"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_j5op0"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_vysyh"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeMatrix.gd" id="7_pmhq1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akigu"]
-bg_color = Color(0.00578329, 0.112129, 0.280229, 0.615686)
-border_width_left = 5
-border_width_top = 40
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.12549, 0, 0.407843, 0.490196)
-border_blend = true
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="LabelSettings" id="LabelSettings_8eess"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_ohq7f"]
 script = ExtResource("5_j5op0")
@@ -41,41 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_15y2e")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 40.0
-offset_top = -248.0
-offset_right = -40.0
-offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("1_5nreh")
-theme_override_styles/panel = SubResource("StyleBoxFlat_akigu")
-script = ExtResource("2_ep3ap")
-
-[node name="Polygon2D" type="Polygon2D" parent="PanelContainer"]
-position = Vector2(0, 70)
-color = Color(0.287001, 0.254595, 0.626443, 0.886275)
-offset = Vector2(0, -50)
-polygon = PackedVector2Array(0, 0, 300, 0, 340, -30, 300, -60, 0, -60)
-
-[node name="Label" type="Label" parent="PanelContainer/Polygon2D"]
-offset_left = 4.0
-offset_top = -105.0
-offset_right = 296.0
-offset_bottom = -54.0
-text = " Name"
-label_settings = SubResource("LabelSettings_8eess")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 layout_mode = 2
 offset_left = 59.0
 offset_top = 432.0

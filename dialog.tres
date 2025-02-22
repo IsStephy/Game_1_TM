@@ -39,6 +39,146 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": "DADDY"
 },
+"1_100": {
+"dialogue": "(Damn, let’s better not bring it up. Better try to get out.)",
+"offset": Vector2(16840, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_101",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_101": {
+"dialogue": "BOBIK, I really don’t remember..",
+"offset": Vector2(17180, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_102",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_102": {
+"dialogue": "You know what, let’s try another time. I guess it can wait",
+"offset": Vector2(17520, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_103",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_103": {
+"dialogue": "Anyway, my friend Lolik, uhm…Called me to… Find some sticks good for beating the krapiva",
+"offset": Vector2(17860, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_104",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_104": {
+"dialogue": "(You just hope that this excuse works.)",
+"offset": Vector2(18200, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_105",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_105": {
+"dialogue": "(Seems that GRANNY doesn’t say anything.)",
+"offset": Vector2(18540, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_106",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_106": {
+"dialogue": "(You seem to be free. For now.)",
+"offset": Vector2(18880, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_107",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_107": {
+"dialogue": "(Final Chapter: The Escape)",
+"offset": Vector2(19220, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_108",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_108": {
+"dialogue": "(You’ve seen enough. Time to leave.)",
+"offset": Vector2(19560, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_109",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_109": {
+"dialogue": "...",
+"offset": Vector2(19900, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_110",
+"text": "1. Try the Front Door"
+},
+1: {
+"condition": {},
+"link": &"1_115",
+"text": "2. Jump Out the Window"
+},
+2: {
+"condition": {},
+"link": &"1_116",
+"text": "3. Hide in Your Room"
+}
+},
+"size": Vector2(300, 289),
+"speaker": ""
+},
 "1_11": {
 "dialogue": "(He loses again.)",
 "offset": Vector2(1660, -1000),
@@ -52,6 +192,136 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": ""
 },
+"1_110": {
+"dialogue": "(The door is locked. Your entire family stands behind you.)",
+"offset": Vector2(20240, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_111",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_111": {
+"dialogue": "Leaving so soon, champ?",
+"offset": Vector2(20580, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_112",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_112": {
+"dialogue": "We were just getting closer as a family.",
+"offset": Vector2(20920, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_113",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_113": {
+"dialogue": "Come give Mommy a kiss!",
+"offset": Vector2(21260, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"1_114",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "MOTHER"
+},
+"1_114": {
+"dialogue": "(They attack.)",
+"offset": Vector2(21600, -1260),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_115": {
+"dialogue": "(You land on a very sharp garden gnome.)",
+"offset": Vector2(20240, -960),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_116": {
+"dialogue": "(You go to bed. The next morning, everything is normal.)",
+"offset": Vector2(20240, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_117",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_117": {
+"dialogue": "Morning, champ! Off to work",
+"offset": Vector2(20580, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_118",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_118": {
+"dialogue": "Studying hard today!",
+"offset": Vector2(20920, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_119",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_119": {
+"dialogue": "Pancakes, sweetheart?",
+"offset": Vector2(21260, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_120",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "MOTHER"
+},
 "1_12": {
 "dialogue": "The economy is rigged",
 "offset": Vector2(2000, -1000),
@@ -64,6 +334,32 @@ nodes = {
 },
 "size": Vector2(300, 240),
 "speaker": "DADDY"
+},
+"1_120": {
+"dialogue": "(You stare in horror. Were you dreaming? Or did they reset things?Did you take some of Suzies potions earlier?You have Dementia?)",
+"offset": Vector2(21600, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_121",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_121": {
+"dialogue": "(The good news is that you survive... for now)))))).)",
+"offset": Vector2(21940, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"3_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
 },
 "1_13": {
 "dialogue": "A toothpick? Are you insane? Do you know what happens if I lose this bet?!",
@@ -471,7 +767,7 @@ BOOM!
 },
 "1_40": {
 "dialogue": "Mom? Can I come in?",
-"offset": Vector2(6602, -698),
+"offset": Vector2(6600, -700),
 "options": {
 0: {
 "condition": {},
@@ -870,7 +1166,7 @@ BOOM!
 },
 "1_67": {
 "dialogue": "(You drop the spoon. Granny giggles sweetly)",
-"offset": Vector2(13400, -700),
+"offset": Vector2(13423.7, -444.858),
 "options": {
 0: {
 "condition": {},
@@ -882,8 +1178,8 @@ BOOM!
 "speaker": ""
 },
 "1_68": {
-"dialogue": "",
-"offset": Vector2(13760, -700),
+"dialogue": "...",
+"offset": Vector2(13901.1, -226.971),
 "options": {
 0: {
 "condition": {},
@@ -1189,12 +1485,12 @@ The round or square chair, without a back[/i]) in the window.)",
 "speaker": ""
 },
 "1_88": {
-"dialogue": "",
-"offset": Vector2(14120, -700),
+"dialogue": "(You think how to escape the urge to it this stew.)",
+"offset": Vector2(14120, -660),
 "options": {
 0: {
 "condition": {},
-"link": "END",
+"link": &"1_93",
 "text": ""
 }
 },
@@ -1266,10 +1562,106 @@ The round or square chair, without a back[/i]) in the window.)",
 "size": Vector2(300, 240),
 "speaker": ""
 },
+"1_93": {
+"dialogue": "Actually, GRANDMA, didn’t you ask me before to help you with something?",
+"offset": Vector2(14460, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_94",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_94": {
+"dialogue": "Did I?",
+"offset": Vector2(14800, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_95",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_95": {
+"dialogue": "Yeah, something to do in the living room",
+"offset": Vector2(15140, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_96",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_96": {
+"dialogue": "Hmm, maybe I just forgot… Let me try to recall it…",
+"offset": Vector2(15480, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_97",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_97": {
+"dialogue": "(She takes you to the living room)",
+"offset": Vector2(15820, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_98",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_98": {
+"dialogue": "(On the wall is a carpet, like the sovietic ones. In the corner high is an icon of Jesus with some dried basil attached to it. You notice something suspicious when analyzing the bookcase …)",
+"offset": Vector2(16160, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_99",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_99": {
+"dialogue": "(Wait a damn second… You see there some books that seem to be quite old… Hmm, and in some language. German? Meinkun… Minecraft… Mankind… Mein something…",
+"offset": Vector2(16500, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_100",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
 "3_1": {
 "link": "END",
-"offset": Vector2(18500, -1780),
+"offset": Vector2(22061.1, -1596.39),
 "signalValue": "DIE"
+},
+"3_2": {
+"link": "END",
+"offset": Vector2(22432.6, -456.484),
+"signalValue": "END"
 }
 }
 variables = {}
