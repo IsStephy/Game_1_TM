@@ -1,0 +1,1277 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://80ompw780k36"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_xuo3k"]
+
+[resource]
+script = ExtResource("1_xuo3k")
+starts = {
+"1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_3",
+"offset": Vector2(-1220, -660),
+"start_id": "1"
+},
+"1_1": {
+"dialogue": "Morning, Daddy! What are you doing?",
+"offset": Vector2(-460, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_10": {
+"dialogue": "A sentimental item? Perfect. The luck of childhood innocence is on my side.",
+"offset": Vector2(1320, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_11": {
+"dialogue": "(He loses again.)",
+"offset": Vector2(1660, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_12",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_12": {
+"dialogue": "The economy is rigged",
+"offset": Vector2(2000, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_16",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_13": {
+"dialogue": "A toothpick? Are you insane? Do you know what happens if I lose this bet?!",
+"offset": Vector2(1320, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_14",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_14": {
+"dialogue": "(He loses. The screen flashes ‘DEBT OWED: ONE (1) CHILD’)",
+"offset": Vector2(1660, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_15",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_15": {
+"dialogue": "Welp. Time to sacrifice you. Nothing personal, kiddo.",
+"offset": Vector2(2000, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_16": {
+"dialogue": "(You survived. You leave the room and enter the next one. This is your sister SUZIE’s room. It’s filled with lab equipment. A strong chemical odor fills the air.)",
+"offset": Vector2(2360, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_17",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_17": {
+"dialogue": "Wow, Suzie, what’s that smell?!",
+"offset": Vector2(2720, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_18",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_18": {
+"dialogue": "The smell of science. (She winks.)",
+"offset": Vector2(3080, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_19",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_19": {
+"dialogue": "Aren’t you like... failing chemistry?",
+"offset": Vector2(3440, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_20",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_2": {
+"dialogue": "Ah, my responsible son! Hard at work, making investments for the family’s future.",
+"offset": Vector2(-100, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_20": {
+"dialogue": "School chemistry, yeah. But this chemistry? Straight A’s, baby.",
+"offset": Vector2(3800, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_21",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_21": {
+"dialogue": "(She motions you closer to a bubbling mixture.)",
+"offset": Vector2(4160, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_22",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_22": {
+"dialogue": "Listen, Bobik, I need a little help. Don’t ask questions, just pick a task.",
+"offset": Vector2(4520, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_28",
+"text": "1. Help Mix Ingredients"
+},
+1: {
+"condition": {},
+"link": &"1_33",
+"text": "2. Be the Test Subject"
+},
+2: {
+"condition": {},
+"link": &"1_23",
+"text": "3. Call the Cops on Her"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "SUZIE"
+},
+"1_23": {
+"dialogue": "(You grab the phone.)",
+"offset": Vector2(4880, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_24",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_24": {
+"dialogue": "\"Hello, police? My sister is literally Breaking Bad-ing in our house.",
+"offset": Vector2(5240, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_25",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_25": {
+"dialogue": "(Police arrive in a few minuts. Suzie gets arrested.)",
+"offset": Vector2(5580, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_26",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_26": {
+"dialogue": "You snitch! I HOPE YOUR GOLDFISH DROWNS!!!!!?!!!!",
+"offset": Vector2(5920, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_27",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_27": {
+"dialogue": "(You survive, but at what cost?
+You leave her room when you hear something. The sound was from the MOTHER's room)",
+"offset": Vector2(6260, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_40",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_28": {
+"dialogue": "(You pour some unknown powder into a beaker.)
+BOOM!
+(The house shakes.)",
+"offset": Vector2(4880, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_29",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_29": {
+"dialogue": "Oh, would you look at that! You just made the next big thing!",
+"offset": Vector2(5240, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_30",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_3": {
+"dialogue": "(You sneek into the living room, where DADDY sits at the table, staring intensely at his laptop screen. He has a cigarette in one hand, a bottle of NOT ORANGE JUICE in the other.)",
+"offset": Vector2(-820, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_30": {
+"dialogue": "(A group of very serious men in suits burst through the window, throwing cash at her.)",
+"offset": Vector2(5580, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_31",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_31": {
+"dialogue": "Congrats, you just helped me get rich. Now get out before you breathe too much of this.",
+"offset": Vector2(5920, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_32",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_32": {
+"dialogue": "You susrvive.
+(You leave her room when you hear something. The sound was from the MOTHER's room)",
+"offset": Vector2(6260, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_40",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_33": {
+"dialogue": "(Suzie hands you a drink.)",
+"offset": Vector2(4880, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_34",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_34": {
+"dialogue": "Suzie, this is literally glowing.",
+"offset": Vector2(5240, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_35",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_35": {
+"dialogue": "Means it’s working.",
+"offset": Vector2(5580, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_36",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_36": {
+"dialogue": "(You drink. Your vision distorts.)",
+"offset": Vector2(5920, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_37",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_37": {
+"dialogue": "I can hear colors.",
+"offset": Vector2(6260, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_38",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_38": {
+"dialogue": "That means the neurons are on fire! In a good way!",
+"offset": Vector2(6600, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_39",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "SUZIE"
+},
+"1_39": {
+"dialogue": "(You pass out. When you wake up, you have no idea who you are. Suzie sells you to a gangster.)",
+"offset": Vector2(6940, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "(You peek at his screen. It's an online gambling site, and he's betting on a game called ‘Rat Races: Crypto Edition’.)",
+"offset": Vector2(260, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_40": {
+"dialogue": "Mom? Can I come in?",
+"offset": Vector2(6602, -698),
+"options": {
+0: {
+"condition": {},
+"link": &"1_41",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_41": {
+"dialogue": "Go away, sweetheart. Mommy’s busy",
+"offset": Vector2(6942, -696),
+"options": {
+0: {
+"condition": {},
+"link": &"1_42",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "MOTHER"
+},
+"1_42": {
+"dialogue": "(your next move is important for your family what you do?1: Knock on the Door)",
+"offset": Vector2(7282, -696),
+"options": {
+0: {
+"condition": {},
+"link": &"1_43",
+"text": "1. Knock on the Door"
+},
+1: {
+"condition": {},
+"link": &"1_46",
+"text": "2. Crack the Door Open Slightly"
+},
+2: {
+"condition": {},
+"link": &"1_49",
+"text": "3. Enter the Room"
+}
+},
+"size": Vector2(300, 289),
+"speaker": ""
+},
+"1_43": {
+"dialogue": "Are you okay? You sound like... you’re wrestling a demon?",
+"offset": Vector2(7620, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_44",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_44": {
+"dialogue": "Same thing. Now shoo, darling!",
+"offset": Vector2(7960, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_45",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "MOTHER"
+},
+"1_45": {
+"dialogue": "(You leave and survive)",
+"offset": Vector2(8300, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_53",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_46": {
+"dialogue": "(You peek inside. A horrific, eldritch creature is in bed with your mother. She is way too comfortable with it.)",
+"offset": Vector2(7620, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_47",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_47": {
+"dialogue": "NOPE. NOPE. NOPE...",
+"offset": Vector2(7960, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_48",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_48": {
+"dialogue": "(You slam the door and run.)
+(You survive, but therapy is needed.)",
+"offset": Vector2(8300, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_53",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_49": {
+"dialogue": "(You enter the room)",
+"offset": Vector2(7620, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_50",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_5": {
+"dialogue": "That’s not work, that's gambling!",
+"offset": Vector2(620, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_6",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_50": {
+"dialogue": "(The creature turns its many eyes toward you. Your mother smiles.)",
+"offset": Vector2(7960, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_51",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_51": {
+"dialogue": "Oh, sweetheart! Meet your real father",
+"offset": Vector2(8300, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_52",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "MOTHER"
+},
+"1_52": {
+"dialogue": "(The creature screeches. You begin transforming into one of them.)
+(You die.)",
+"offset": Vector2(8640, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_53": {
+"dialogue": "(You enter the kitchen. You smell a rich smell of homemade stew (Mmm, yummy). Granny stirs the pot, smiling warmly.)",
+"offset": Vector2(8640, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_54",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_54": {
+"dialogue": "Wow, Granny, what’s up here?",
+"offset": Vector2(8980, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_55",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_55": {
+"dialogue": "Oh, my dear, it’s an old family recipe! Sit down, sit down!",
+"offset": Vector2(9320, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_56",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_56": {
+"dialogue": "(She pours some stew into a bowl and hands it to you)",
+"offset": Vector2(9660, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_57",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_57": {
+"dialogue": "Here, have some. Let me also give you some [b]kompot[/b] ([i]product prepared from fruit, fresh or dried, boiled in water with sugar[/i]), freshly made.",
+"offset": Vector2(10000, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_58",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_58": {
+"dialogue": "(You sip some of the stew. Wow! That’s one of the best stews that you ever tasted!)",
+"offset": Vector2(10340, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_59",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_59": {
+"dialogue": "This is really good!",
+"offset": Vector2(10680, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_60",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_6": {
+"dialogue": "Same thing, kiddo. Now listen, I need something valuable to bet. Hand over an item.",
+"offset": Vector2(980, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_7",
+"text": "1.Give Your Computer"
+},
+1: {
+"condition": {},
+"link": &"1_10",
+"text": "2. Give Your Favorite Toy"
+},
+2: {
+"condition": {},
+"link": &"1_13",
+"text": "3. Give a Toothpick"
+}
+},
+"size": Vector2(300, 289),
+"speaker": "DADDY"
+},
+"1_60": {
+"dialogue": "Oh, I knew you’d love it! Just like your dead Grandad used to!",
+"offset": Vector2(11020, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_61",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_61": {
+"dialogue": "(You pause. Something is off. The meat tastes a bit… strange)",
+"offset": Vector2(11360, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_62",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_62": {
+"dialogue": "Granny… what kind of meat is this?",
+"offset": Vector2(11700, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_63",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_63": {
+"dialogue": "Oh, please, kogda ya kushayu, ya gluh i nem. But don’t worry, it’s definetelly organic",
+"offset": Vector2(12040, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_64",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_64": {
+"dialogue": "(You lift your spoon. Something floats up. A human tooth. Ahuieti ne vstati.)",
+"offset": Vector2(12380, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_65",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_65": {
+"dialogue": "Granny. Whose tooth is that?",
+"offset": Vector2(12720, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_66",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_66": {
+"dialogue": "Oh, dear! I forgot to take it out! Oh, my dear retard husband… Worry not, he washed his teeth regularly",
+"offset": Vector2(13060, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_67",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_67": {
+"dialogue": "(You drop the spoon. Granny giggles sweetly)",
+"offset": Vector2(13400, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_68",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_68": {
+"dialogue": "",
+"offset": Vector2(13760, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_69",
+"text": "1. Spit It Out and Run"
+},
+1: {
+"condition": {},
+"link": &"1_87",
+"text": "2. Call the Cops"
+},
+2: {
+"condition": {},
+"link": &"1_88",
+"text": "3. Try to find an excuse"
+}
+},
+"size": Vector2(300, 289),
+"speaker": ""
+},
+"1_69": {
+"dialogue": "(You run to the door, but it’s locked...)",
+"offset": Vector2(14120, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_70",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "\"Good choice, boy. I’ll turn this into millions.\"",
+"offset": Vector2(1340, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_8",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_70": {
+"dialogue": "Now, now! No one leaves the table hungry! End your stew or no [b]blinciki[/b] ([I]Russian national dish, made of pancake dough, laid in layers and having different fillings[/I]) for you!",
+"offset": Vector2(14460, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_71",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_71": {
+"dialogue": "(Looking at the stew makes you sick. Granny hums happily)",
+"offset": Vector2(14800, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_72",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_72": {
+"dialogue": "While you eating, let me tell you a funny anecdote!”",
+"offset": Vector2(15140, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_73",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_73": {
+"dialogue": "Two friends meet at the bar. One tells to the other",
+"offset": Vector2(15480, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_74",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_74": {
+"dialogue": "Have you read the news? They recently caught a cannibal!",
+"offset": Vector2(15820, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_75",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_75": {
+"dialogue": "No way?! What gave him away?",
+"offset": Vector2(16160, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_76",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "BOBIK"
+},
+"1_76": {
+"dialogue": "He was selling pelimeni called \"My Family\"...",
+"offset": Vector2(16500, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_77",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_77": {
+"dialogue": "(I have to do something)",
+"offset": Vector2(16840, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_78",
+"text": "1. Keep eating the stew"
+},
+1: {
+"condition": {},
+"link": &"1_81",
+"text": "2. Break the window and escape"
+},
+2: {
+"condition": {},
+"link": &"1_85",
+"text": "3. Throw the stew sneakily"
+}
+},
+"size": Vector2(300, 289),
+"speaker": ""
+},
+"1_78": {
+"dialogue": "(You feel sick.)",
+"offset": Vector2(17180, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_79",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_79": {
+"dialogue": "(Yew! Is that a flock of gray hair? You can’t resist and gag)",
+"offset": Vector2(17520, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"1_80",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_8": {
+"dialogue": "(He immediately loses everything.)",
+"offset": Vector2(1660, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_9",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_80": {
+"dialogue": "(Granny seems not happy. She takes a flycatcher (aka muhaboika) and beats you.)",
+"offset": Vector2(17860, -1600),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_81": {
+"dialogue": "(You throw [b]taburetka[/b]([i]
+The round or square chair, without a back[/i]) in the window.)",
+"offset": Vector2(17180, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_82",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_82": {
+"dialogue": "(Huh, what is wrong with these windows? They seem unbreakable.)",
+"offset": Vector2(17520, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_83",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_83": {
+"dialogue": "(Something… flies into you???)",
+"offset": Vector2(17860, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_84",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_84": {
+"dialogue": "(It’s the big jar with kompot. You pass out.)",
+"offset": Vector2(18200, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_85": {
+"dialogue": "(You throw the suspicious stew into the flower pot, hoping the GRANNY will not notice.)",
+"offset": Vector2(14120, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_86",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_86": {
+"dialogue": "Oh, you’re done already? Oh my, you’re a hungry boy! Let me add some more stew in your bowl",
+"offset": Vector2(14460, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_68",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_87": {
+"dialogue": "(You try to reach for the phone.)",
+"offset": Vector2(14120, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_89",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_88": {
+"dialogue": "",
+"offset": Vector2(14120, -700),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_89": {
+"dialogue": "Oh, I did read on Odnoklasniki that eating with the phone makes you really sick. Give me here the phone, it will wait",
+"offset": Vector2(14460, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_90",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_9": {
+"dialogue": "I was hacked. Yep. That’s the only explanation.",
+"offset": Vector2(2000, -1300),
+"options": {
+0: {
+"condition": {},
+"link": &"1_16",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "DADDY"
+},
+"1_90": {
+"dialogue": "Why are you calling 112? Did my stew make you criminally ill? Wait, I have here some aktivirovanyi ugoli.",
+"offset": Vector2(14800, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_91",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_91": {
+"dialogue": "Such a universal remedy, my mom used to heal rabbies of my brothers and sisters with it. Ironically, they didn’t survive. Such good memories.",
+"offset": Vector2(15140, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_92",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": "GRANNY"
+},
+"1_92": {
+"dialogue": "(Seems that cops will never arrive)",
+"offset": Vector2(15480, -1000),
+"options": {
+0: {
+"condition": {},
+"link": &"1_68",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(18500, -1780),
+"signalValue": "DIE"
+}
+}
+variables = {}
+strays = Array[String]([])
+characters = ""
