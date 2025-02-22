@@ -2,7 +2,7 @@
 ## A node for displaying branching dialogues, primarily created using the Dialogue Nodes editor.
 class_name DialogueBox
 extends Panel
- 
+
 
 ## Triggered when a dialogue has started. Passes [param id] of the dialogue tree as defined in the StartNode.
 signal dialogue_started(id : String)
@@ -68,24 +68,29 @@ signal dialogue_ended
 	]
 
 @export_group('Options')
+
 ## The maximum number of options to show in the dialogue box.
-@export var max_options_count := 4 :
+@export var max_options_count := 4:
 	get:
 		return max_options_count
 	set(value):
 		max_options_count = max(value, 1)
 		
 		if options_container:
-			# clear all options
+			# Clear all existing buttons.
 			for option in options_container.get_children():
 				options_container.remove_child(option)
 				option.queue_free()
 		
+			# Create new buttons hidden by default.
 			for idx in range(max_options_count):
 				var button = Button.new()
 				options_container.add_child(button)
-				button.text = 'Option '+str(idx+1)
+				button.text = "Option " + str(idx + 1)
+				button.hide()  # Always start hidden.
 				button.pressed.connect(select_option.bind(idx))
+
+
 ## Icon displayed when no text options are available.
 @export var next_icon : Texture2D = preload('res://addons/dialogue_nodes/icons/Play.svg')
 ## Alignment of options.
@@ -239,11 +244,26 @@ func _process(delta):
 
 
 func _input(event):
-	if is_running() and Input.is_action_just_pressed(skip_input_action):
-		if _wait_effect and not _wait_effect.skip:
-			_wait_effect.skip = true
-			await get_tree().process_frame
-			_on_wait_finished()
+	if is_running():
+		if wait_for_input_continue:
+			if event is InputEventMouseButton and event.pressed:
+				_continue_dialogue()
+			elif event is InputEventKey and event.pressed and (event.scancode == KEY_SPACE or event.scancode == MOUSE_BUTTON_MASK_LEFT):
+				_continue_dialogue()
+		elif Input.is_action_just_pressed(skip_input_action):
+			if _wait_effect and not _wait_effect.skip:
+				_wait_effect.skip = true
+				await get_tree().process_frame
+				_on_wait_finished()
+
+func _continue_dialogue():
+	if _dialogue_parser:
+		call_deferred("_call_continue")
+	wait_for_input_continue = false
+
+func _call_continue():
+	_dialogue_parser.continue_dialogue()
+
 
 
 ## Starts processing the dialogue [member data], starting with the Start Node with its ID set to [param start_id].
@@ -273,45 +293,65 @@ func _on_dialogue_started(id : String):
 	speaker_label.text = ''
 	portrait.texture = null
 	dialogue_label.text = ''
+	center_dialogue()
 	show()
 	dialogue_started.emit(id)
 
+var wait_for_input_continue = false
 
-func _on_dialogue_processed(speaker : Variant, dialogue : String, options : Array[String]):
-	# set speaker
-	speaker_label.text = ''
-	portrait.texture = null
-	portrait.visible = not hide_portrait
+@onready var textfield = self.get_parent()
+func center_dialogue():
+	options_vertical = true
+	options_container.anchor_left = 0.5
+	options_container.anchor_right = 0.5
+	options_container.anchor_top = 0.5
+	options_container.anchor_bottom = 0.5
+	_on_dialogue_started
+	options_container.position.x = textfield.size.x / 2
+	options_container.position.y = -textfield.size.y / 2
+
+
+func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[String]):
+	# Set speaker, dialogue text, etc.
 	if speaker is Character:
 		speaker_label.text = speaker.name
 		speaker_label.modulate = speaker.color
 		portrait.texture = speaker.image
-		if not speaker.image: portrait.hide()
+		if not speaker.image:
+			portrait.hide()
 	elif speaker is String:
 		speaker_label.text = speaker
 		speaker_label.modulate = Color.WHITE
 		portrait.hide()
-	
-	# set dialogue
+
 	dialogue_label.text = _dialogue_parser._update_wait_tags(dialogue_label, dialogue)
 	dialogue_label.get_v_scroll_bar().set_value_no_signal(0)
 	for effect in custom_effects:
 		if effect is RichTextWait:
 			effect.skip = false
 			break
-	
-	# set options
-	for idx in range(options_container.get_child_count()):
-		var option : Button = options_container.get_child(idx)
-		if idx >= options.size():
-			option.hide()
-			continue
-		option.text = options[idx].replace('[br]', '\n')
-		option.show()
-	options_container.get_child(0).icon = next_icon if options.size() == 1 and options[0] == '' else null
+
+	if options.size() == 0 or options.size() == 1:
+		wait_for_input_continue = true
+		for child in options_container.get_children():
+			child.hide()
+	else:
+		wait_for_input_continue = false
+		# Show and update buttons
+		for idx in range(options_container.get_child_count()):
+			var option: Button = options_container.get_child(idx)
+			if idx < options.size():
+				option.text = options[idx].replace("[br]", "\n")
+				option.show()  
+			else:
+				option.hide() 
+		if options.size() == 1 and options[0] == '':
+			options_container.get_child(0).icon = next_icon
+
+	# Hide the container until the wait effect is finished
 	options_container.hide()
-	
 	dialogue_processed.emit(speaker, dialogue, options)
+
 
 
 func _on_option_selected(idx : int):
@@ -333,4 +373,5 @@ func _on_dialogue_ended():
 
 func _on_wait_finished():
 	options_container.show()
+	call_deferred("center_dialogue")
 	options_container.get_child(0).grab_focus()

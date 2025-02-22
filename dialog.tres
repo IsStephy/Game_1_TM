@@ -215,7 +215,7 @@ nodes = {
 "text": "3. Call the Cops on Her"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": "SUZIE"
 },
 "1_23": {
@@ -515,7 +515,7 @@ BOOM!
 "text": "3. Enter the Room"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": ""
 },
 "1_43": {
@@ -774,7 +774,7 @@ BOOM!
 "text": "3. Give a Toothpick"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": "DADDY"
 },
 "1_60": {
@@ -901,7 +901,7 @@ BOOM!
 "text": "3. Try to find an excuse"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": ""
 },
 "1_69": {
@@ -1041,7 +1041,7 @@ BOOM!
 "text": "3. Throw the stew sneakily"
 }
 },
-"size": Vector2(300, 289),
+"size": Vector2(300, 322),
 "speaker": ""
 },
 "1_78": {

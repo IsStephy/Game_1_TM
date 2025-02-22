@@ -122,9 +122,10 @@ func _process_start(dict : Dictionary):
 
 
 # Processes the dialogue node data (dict).
+var last_dialogue_link = null  # Add this as a member variable at the top of your DialogueParser
+
 func _process_dialogue(dict : Dictionary):
 	var speaker = ''
-	
 	if dict.speaker is String:
 		speaker = dict.speaker
 	elif dict.speaker is int and characters.size() > 0 and dict.speaker < characters.size():
@@ -139,7 +140,14 @@ func _process_dialogue(dict : Dictionary):
 			option_texts.append(_parse_variables(option.text))
 			_option_links.append(option.link)
 	
+	# Store the default link (to continue when no options are available)
+	if dict.has("link"):
+		last_dialogue_link = dict["link"]
+	else:
+		last_dialogue_link = ""
+	
 	dialogue_processed.emit(speaker, dialogue_text, option_texts)
+
 
 
 # Processes the signal node data (dict).
@@ -334,3 +342,11 @@ func _update_wait_tags(node : RichTextLabel, value : String):
 		value = value.insert(start_data.at, insert_text)
 	
 	return value
+	
+func continue_dialogue():
+	if _option_links.size() > 0:
+		select_option(0)
+	elif last_dialogue_link != "":
+		_proceed(last_dialogue_link)
+	else:
+		printerr("No continuation link found, but dialogue is still running.")
