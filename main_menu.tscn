@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmntcrv8d3sfb"]
+[gd_scene load_steps=3 format=3 uid="uid://dmntcrv8d3sfb"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_6sexx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_winwb"]
 bg_color = Color(0, 0.0313726, 0.290196, 1)
@@ -24,6 +26,7 @@ offset_right = 8.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6sexx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -117,3 +120,9 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_winwb")
 text = "Continue"
+
+[connection signal="pressed" from="Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Load_Button" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="Save_Button" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Exit_Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Continue_Button" to="." method="_on_continue_button_pressed"]

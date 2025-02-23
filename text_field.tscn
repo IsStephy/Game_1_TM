@@ -26,6 +26,7 @@ grow_vertical = 2
 script = ExtResource("1_15y2e")
 
 [node name="DialogueBox" type="Panel" parent="."]
+visible = false
 layout_mode = 2
 offset_left = 336.0
 offset_top = 450.0
