@@ -273,6 +273,7 @@ func is_running():
 	return _running
 
 
+
 func _on_dialogue_started(id : String):
 	_running = true
 	var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
