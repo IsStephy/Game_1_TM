@@ -23,9 +23,10 @@ script = ExtResource("1_a5djk")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_g5yst")
 
+[node name="dead_screen" parent="CanvasLayer" instance=ExtResource("2_2b55l")]
+visible = false
+script = ExtResource("4_pvf3i")
+
 [node name="TextField" parent="CanvasLayer" instance=ExtResource("1_pu77l")]
 self_modulate = Color(1, 1, 1, 0.933333)
 script = SubResource("GDScript_f8n6j")
-
-[node name="dead_screen" parent="CanvasLayer" instance=ExtResource("2_2b55l")]
-script = ExtResource("4_pvf3i")

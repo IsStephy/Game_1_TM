@@ -157,28 +157,28 @@ var _wait_effect : RichTextWait
 
 
 func _enter_tree():
-	# Remove any existing children.
+	# Remove any existing children from DialogueBox (if needed)
 	if get_child_count() > 0:
 		for child in get_children():
 			remove_child(child)
 			child.queue_free()
-
-	# --- Create the portrait as a standalone node ---
-	portrait = TextureRect.new()
-	add_child(portrait)  # Add directly to the DialogueBox.
-	portrait.texture = sample_portrait
-	portrait.scale = Vector2(2, 2)  # Scale the portrait 3 times larger.
-	portrait.z_index = -1                # Render it behind the dialogue UI.
-	portrait.visible = not hide_portrait
-	# Set anchors to center (adjust as needed)
-	portrait.anchor_left = 0.5
-	portrait.anchor_top = 0.5
-	portrait.anchor_right = 0.5
-	portrait.anchor_bottom = 0.5
-	portrait.position = Vector2(-100, -500)
 	
-	# --- Create the dialogue UI container ---
-	# Renaming the margin container to avoid conflicts.
+	# --- Get the externally created VBox ---
+	# Adjust the node path as necessary to point to your manually created VBox.
+	var external_vbox = get_node("/root/Node2D/CanvasLayer/TextField/PortraitVBox")
+	
+	# --- Create the portrait as a TextureRect and add it to the external VBox ---
+	portrait = TextureRect.new()
+	portrait.texture = sample_portrait
+	portrait.expand = true
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	portrait.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	portrait.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	portrait.z_index = -1   # Ensure it's behind other elements if needed.
+	portrait.visible = not hide_portrait
+	external_vbox.add_child(portrait)
+	
+	# --- Create the dialogue UI container inside the DialogueBox ---
 	var dlg_margin_container = MarginContainer.new()
 	add_child(dlg_margin_container)
 	dlg_margin_container.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -229,6 +229,7 @@ func _enter_tree():
 	_dialogue_parser.dialogue_signal.connect(_on_dialogue_signal)
 	_dialogue_parser.variable_changed.connect(_on_variable_changed)
 	_dialogue_parser.dialogue_ended.connect(_on_dialogue_ended)
+
 
 
 
@@ -393,6 +394,7 @@ func _on_dialogue_signal(value: String):
 		#color.mouse_filter = Control.MOUSE_FILTER_STOP
 		label.text = "You have died!"
 		_main_container.hide()
+		portrait.hide()
 
 
 

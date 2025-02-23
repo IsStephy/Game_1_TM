@@ -26,10 +26,9 @@ grow_vertical = 2
 script = ExtResource("1_15y2e")
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 layout_mode = 2
-offset_left = 59.0
-offset_top = 432.0
+offset_left = 332.0
+offset_top = 386.0
 offset_right = 1100.0
 offset_bottom = 587.0
 mouse_force_pass_scroll_events = false
@@ -41,3 +40,9 @@ scroll_speed = -3
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_ohq7f"), SubResource("RichTextEffect_gs355"), SubResource("RichTextEffect_q8mhm")])
 options_position = 0
 hide_on_dialogue_end = false
+
+[node name="PortraitVBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 172.0
+offset_right = 333.0
+offset_bottom = 645.0
