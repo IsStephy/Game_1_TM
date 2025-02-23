@@ -12,31 +12,25 @@ func _ready() -> void:
 @onready var color = $ColorRect
 var is_menu = false
 func _input(event):
-	
-	if event.is_action_pressed("ui_cancel") and is_menu == false:
-		is_menu = true
-		
-	elif event.is_action_pressed("ui_cancel") and is_menu == true:
-		is_menu = false
-		
-	if is_menu == true:
-		exit_but.visible = true
-		continue_but.visible = true
-		start_but.visible = true
-		save_but.visible = true
-		load_but.visible = true
-		color.visible = true
+	if event.is_action_pressed("ui_cancel"):
+		is_menu = !is_menu
+	update_menu_visibility()
+
+func update_menu_visibility():
+  # Show/hide the menu buttons
+	exit_but.visible = is_menu
+	continue_but.visible = is_menu
+	start_but.visible = is_menu
+	save_but.visible = is_menu
+	load_but.visible = is_menu
+	color.visible = is_menu
+	if is_menu:
+		self.mouse_filter = Control.MOUSE_FILTER_STOP
 	else:
-		exit_but.visible = false
-		continue_but.visible = false
-		start_but.visible = false
-		save_but.visible = false
-		load_but.visible = false
-		color.visible = false
-		
+		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_continue_button_pressed() -> void:
-	is_menu = false
+	is_menu = !is_menu
 
 
 func _on_start_button_pressed() -> void:
