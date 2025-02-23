@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/background_1.gd" id="1_t7nra"]
 [ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="2_1ofrr"]
 [ext_resource type="PackedScene" uid="uid://dmntcrv8d3sfb" path="res://scenes/main_menu.tscn" id="3_nsg7t"]
-[ext_resource type="Texture2D" uid="uid://qvq6cvgcfyoh" path="res://assets/scenes/bro/bro_room_day.png" id="3_pcgng"]
+[ext_resource type="Texture2D" uid="uid://sa5lww3rtcea" path="res://assets/scenes/bro/bro_room_day.png" id="3_pcgng"]
 [ext_resource type="PackedScene" uid="uid://dvuq6l8glgp1h" path="res://scenes/dead_screen.tscn" id="4_8uibw"]
 [ext_resource type="Script" path="res://scripts/dead_screen.gd" id="5_jcn4o"]
 [ext_resource type="PackedScene" uid="uid://hhm0f2nhdcni" path="res://scenes/text_field.tscn" id="6_l6nbq"]

@@ -544,13 +544,7 @@ func _on_dialogue_signal(value: String):
 		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
 		texture.texture = new_texture
 	if value ==  "BACK19":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
-		texture.texture = new_texture
-	if value ==  "BACK20":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
-		texture.texture = new_texture
-	if value ==  "BACK21":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/final/coridor.png")
 		texture.texture = new_texture
 	if value ==  "BACK22":
 		var new_texture = preload("res://assets/scenes/bro/bro_room_night.png")
@@ -559,9 +553,6 @@ func _on_dialogue_signal(value: String):
 		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
 		texture.texture = new_texture
 	
-
-
-
 
 func _on_variable_changed(variable_name : String, value):
 	variable_changed.emit(variable_name, value)
