@@ -300,6 +300,11 @@ func select_option(idx : int):
 func is_running():
 	if _dialogue_parser:
 		return _dialogue_parser.is_running()
+<<<<<<< HEAD
+	return false
+
+=======
+>>>>>>> a012d929fa34b303078365ae29a6c3ba52f3a641
 
 
 func _on_dialogue_started(id : String):
