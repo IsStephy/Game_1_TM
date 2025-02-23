@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c3m2niars75r7"
+=======
+uid="uid://qvq6cvgcfyoh"
+>>>>>>> e02d2f29b201d082d3ce498991b1182cdd9427af
 path="res://.godot/imported/bro_room_day.png-a89b98597d03aa0fd39c675bc21295ec.ctex"
 metadata={
 "vram_texture": false

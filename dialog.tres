@@ -9,8 +9,8 @@ starts = {
 }
 nodes = {
 "0_1": {
-"link": &"1_3",
-"offset": Vector2(-1220, -660),
+"link": &"3_10",
+"offset": Vector2(-1580, -680),
 "start_id": "1"
 },
 "1_1": {
@@ -28,7 +28,7 @@ nodes = {
 },
 "1_10": {
 "dialogue": "A sentimental item? Perfect. The luck of childhood innocence is on my side.",
-"offset": Vector2(1320, -1000),
+"offset": Vector2(1360, -860),
 "options": {
 0: {
 "condition": {},
@@ -123,7 +123,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_107",
+"link": &"3_29",
 "text": ""
 }
 },
@@ -162,17 +162,17 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_110",
+"link": &"3_30",
 "text": "1. Try the Front Door"
 },
 1: {
 "condition": {},
-"link": &"1_115",
+"link": &"3_31",
 "text": "2. Jump Out the Window"
 },
 2: {
 "condition": {},
-"link": &"1_116",
+"link": &"3_32",
 "text": "3. Hide in Your Room"
 }
 },
@@ -181,7 +181,7 @@ nodes = {
 },
 "1_11": {
 "dialogue": "(He loses again.)",
-"offset": Vector2(1660, -1000),
+"offset": Vector2(1700, -860),
 "options": {
 0: {
 "condition": {},
@@ -276,7 +276,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_117",
+"link": &"3_33",
 "text": ""
 }
 },
@@ -324,11 +324,11 @@ nodes = {
 },
 "1_12": {
 "dialogue": "The economy is rigged",
-"offset": Vector2(2000, -1000),
+"offset": Vector2(2040, -860),
 "options": {
 0: {
 "condition": {},
-"link": &"1_16",
+"link": &"3_15",
 "text": ""
 }
 },
@@ -361,9 +361,22 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": ""
 },
+"1_122": {
+"dialogue": "You, [b]BOBIK[/b], wake up in your slightly broken bed, the moldy ceiling staring back at you. The smell of something burning drifts in from the kitchen. The air is filled with the sounds of your family being TOTALLY normal. You begin your day.",
+"offset": Vector2(-1160, -700),
+"options": {
+0: {
+"condition": {},
+"link": &"3_11",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
 "1_13": {
 "dialogue": "A toothpick? Are you insane? Do you know what happens if I lose this bet?!",
-"offset": Vector2(1320, -700),
+"offset": Vector2(1360, -460),
 "options": {
 0: {
 "condition": {},
@@ -376,11 +389,11 @@ nodes = {
 },
 "1_14": {
 "dialogue": "(He loses. The screen flashes ‘DEBT OWED: ONE (1) CHILD’)",
-"offset": Vector2(1660, -700),
+"offset": Vector2(1700, -460),
 "options": {
 0: {
 "condition": {},
-"link": &"1_15",
+"link": &"3_14",
 "text": ""
 }
 },
@@ -389,7 +402,7 @@ nodes = {
 },
 "1_15": {
 "dialogue": "Welp. Time to sacrifice you. Nothing personal, kiddo.",
-"offset": Vector2(2000, -700),
+"offset": Vector2(2040, -460),
 "options": {
 0: {
 "condition": {},
@@ -401,8 +414,8 @@ nodes = {
 "speaker": 1
 },
 "1_16": {
-"dialogue": "(You survived. You leave the room and enter the next one. This is your sister SUZIE’s room. It’s filled with lab equipment. A strong chemical odor fills the air.)",
-"offset": Vector2(2360, -1000),
+"dialogue": "(You leave the room and enter the next one. This is your sister SUZIE’s room. It’s filled with lab equipment. A strong chemical odor fills the air.)",
+"offset": Vector2(2400, -860),
 "options": {
 0: {
 "condition": {},
@@ -458,7 +471,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_4",
+"link": &"3_12",
 "text": ""
 }
 },
@@ -471,7 +484,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_21",
+"link": &"3_16",
 "text": ""
 }
 },
@@ -533,7 +546,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_25",
+"link": &"3_18",
 "text": ""
 }
 },
@@ -573,7 +586,7 @@ You leave her room when you hear something. The sound was from the MOTHER's room
 "options": {
 0: {
 "condition": {},
-"link": &"1_40",
+"link": &"3_19",
 "text": ""
 }
 },
@@ -601,7 +614,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_30",
+"link": &"3_17",
 "text": ""
 }
 },
@@ -623,7 +636,7 @@ BOOM!
 },
 "1_30": {
 "dialogue": "(A group of very serious men in suits burst through the window, throwing cash at her.)",
-"offset": Vector2(5580, -1000),
+"offset": Vector2(5820, -1000),
 "options": {
 0: {
 "condition": {},
@@ -636,7 +649,7 @@ BOOM!
 },
 "1_31": {
 "dialogue": "Congrats, you just helped me get rich. Now get out before you breathe too much of this.",
-"offset": Vector2(5920, -1000),
+"offset": Vector2(6160, -1000),
 "options": {
 0: {
 "condition": {},
@@ -648,13 +661,12 @@ BOOM!
 "speaker": 2
 },
 "1_32": {
-"dialogue": "You susrvive.
-(You leave her room when you hear something. The sound was from the MOTHER's room)",
-"offset": Vector2(6260, -1000),
+"dialogue": "(You leave her room when you hear something. The sound was from the MOTHER's room)",
+"offset": Vector2(6500, -1000),
 "options": {
 0: {
 "condition": {},
-"link": &"1_40",
+"link": &"3_19",
 "text": ""
 }
 },
@@ -706,7 +718,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_37",
+"link": &"3_20",
 "text": ""
 }
 },
@@ -732,7 +744,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_39",
+"link": &"3_21",
 "text": ""
 }
 },
@@ -802,12 +814,12 @@ BOOM!
 },
 1: {
 "condition": {},
-"link": &"1_46",
+"link": &"3_24",
 "text": "2. Crack the Door Open Slightly"
 },
 2: {
 "condition": {},
-"link": &"1_49",
+"link": &"3_22",
 "text": "3. Enter the Room"
 }
 },
@@ -846,7 +858,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_53",
+"link": &"3_26",
 "text": ""
 }
 },
@@ -872,7 +884,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_48",
+"link": &"3_25",
 "text": ""
 }
 },
@@ -881,7 +893,7 @@ BOOM!
 },
 "1_48": {
 "dialogue": "(You slam the door and run.)
-(You survive, but therapy is needed.)",
+",
 "offset": Vector2(8300, -1000),
 "options": {
 0: {
@@ -895,7 +907,7 @@ BOOM!
 },
 "1_49": {
 "dialogue": "(You enter the room)",
-"offset": Vector2(7620, -1300),
+"offset": Vector2(7620, -1540),
 "options": {
 0: {
 "condition": {},
@@ -921,7 +933,7 @@ BOOM!
 },
 "1_50": {
 "dialogue": "(The creature turns its many eyes toward you. Your mother smiles.)",
-"offset": Vector2(7960, -1300),
+"offset": Vector2(7960, -1540),
 "options": {
 0: {
 "condition": {},
@@ -934,11 +946,11 @@ BOOM!
 },
 "1_51": {
 "dialogue": "Oh, sweetheart! Meet your real father",
-"offset": Vector2(8300, -1300),
+"offset": Vector2(8300, -1540),
 "options": {
 0: {
 "condition": {},
-"link": &"1_52",
+"link": &"3_23",
 "text": ""
 }
 },
@@ -947,7 +959,7 @@ BOOM!
 },
 "1_52": {
 "dialogue": "(The creature screeches. You begin transforming into one of them.)",
-"offset": Vector2(8640, -1300),
+"offset": Vector2(8640, -1540),
 "options": {
 0: {
 "condition": {},
@@ -990,7 +1002,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_56",
+"link": &"3_27",
 "text": ""
 }
 },
@@ -1165,7 +1177,7 @@ BOOM!
 },
 "1_67": {
 "dialogue": "(You drop the spoon. Granny giggles sweetly)",
-"offset": Vector2(13423.7, -444.858),
+"offset": Vector2(13400, -700),
 "options": {
 0: {
 "condition": {},
@@ -1178,7 +1190,7 @@ BOOM!
 },
 "1_68": {
 "dialogue": "...",
-"offset": Vector2(13760, -440),
+"offset": Vector2(13740, -700),
 "options": {
 0: {
 "condition": {},
@@ -1214,7 +1226,7 @@ BOOM!
 },
 "1_7": {
 "dialogue": "\"Good choice, boy. I’ll turn this into millions.\"",
-"offset": Vector2(1340, -1300),
+"offset": Vector2(1300, -1460),
 "options": {
 0: {
 "condition": {},
@@ -1367,11 +1379,11 @@ BOOM!
 },
 "1_8": {
 "dialogue": "(He immediately loses everything.)",
-"offset": Vector2(1660, -1300),
+"offset": Vector2(1620, -1460),
 "options": {
 0: {
 "condition": {},
-"link": &"1_9",
+"link": &"3_13",
 "text": ""
 }
 },
@@ -1511,11 +1523,11 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "1_9": {
 "dialogue": "I was hacked. Yep. That’s the only explanation.",
-"offset": Vector2(2000, -1300),
+"offset": Vector2(1960, -1460),
 "options": {
 0: {
 "condition": {},
-"link": &"1_16",
+"link": &"3_15",
 "text": ""
 }
 },
@@ -1606,7 +1618,7 @@ The round or square chair, without a back[/i]) in the window.)",
 "options": {
 0: {
 "condition": {},
-"link": &"1_97",
+"link": &"3_28",
 "text": ""
 }
 },
@@ -1657,15 +1669,135 @@ The round or square chair, without a back[/i]) in the window.)",
 "offset": Vector2(21940, -1260),
 "signalValue": "DIE7"
 },
+"3_10": {
+"link": &"1_122",
+"offset": Vector2(-1380, -820),
+"signalValue": "BACK0"
+},
+"3_11": {
+"link": &"1_3",
+"offset": Vector2(-940, -820),
+"signalValue": "BACK1"
+},
+"3_12": {
+"link": &"1_4",
+"offset": Vector2(140, -840),
+"signalValue": "BACK2"
+},
+"3_13": {
+"link": &"1_9",
+"offset": Vector2(1860, -1040),
+"signalValue": "BACK3"
+},
+"3_14": {
+"link": &"1_15",
+"offset": Vector2(1940, -120),
+"signalValue": "BACK4"
+},
+"3_15": {
+"link": &"1_16",
+"offset": Vector2(2506.29, -1003.79),
+"signalValue": "BACK5"
+},
+"3_16": {
+"link": &"1_21",
+"offset": Vector2(4020, -800),
+"signalValue": "BACK6"
+},
+"3_17": {
+"link": &"1_30",
+"offset": Vector2(5580, -1000),
+"signalValue": "BACK7"
+},
+"3_18": {
+"link": &"1_25",
+"offset": Vector2(5580, -820),
+"signalValue": "BACK8"
+},
+"3_19": {
+"link": &"1_40",
+"offset": Vector2(6840, -1000),
+"signalValue": "BACK9"
+},
 "3_2": {
 "link": "END",
 "offset": Vector2(22280, -660),
 "signalValue": "END"
 },
+"3_20": {
+"link": &"1_37",
+"offset": Vector2(6120, -1420),
+"signalValue": "BACK10"
+},
+"3_21": {
+"link": &"1_39",
+"offset": Vector2(6820, -1440),
+"signalValue": "BACK11"
+},
+"3_22": {
+"link": &"1_49",
+"offset": Vector2(7400, -1620),
+"signalValue": "BACK12"
+},
+"3_23": {
+"link": &"1_52",
+"offset": Vector2(8500, -1700),
+"signalValue": "BACK13"
+},
+"3_24": {
+"link": &"1_46",
+"offset": Vector2(7320, -1000),
+"signalValue": "BACK14"
+},
+"3_25": {
+"link": &"1_48",
+"offset": Vector2(8160, -1120),
+"signalValue": "BACK15"
+},
+"3_26": {
+"link": &"1_53",
+"offset": Vector2(8552.76, -340.257),
+"signalValue": "BACK16"
+},
+"3_27": {
+"link": &"1_56",
+"offset": Vector2(9520, -380),
+"signalValue": "BACK17"
+},
+"3_28": {
+"link": &"1_97",
+"offset": Vector2(15720, -360),
+"signalValue": "BACK18"
+},
+"3_29": {
+"link": &"1_107",
+"offset": Vector2(19100, -800),
+"signalValue": "BACK19"
+},
 "3_3": {
 "link": "END",
-"offset": Vector2(2362.32, -545.39),
+"offset": Vector2(2400, -300),
 "signalValue": "DIE0"
+},
+"3_30": {
+"link": &"1_110",
+"offset": Vector2(20000, -1260),
+"signalValue": "BACK20"
+},
+"3_31": {
+"link": &"1_115",
+"offset": Vector2(20000, -960),
+"signalValue": "BACK21"
+},
+"3_32": {
+"link": &"1_116",
+"offset": Vector2(20040, -260),
+"signalValue": "BACK22"
+},
+"3_33": {
+"link": &"1_117",
+"offset": Vector2(20500, -300),
+"signalValue": "BACK23"
 },
 "3_4": {
 "link": "END",
@@ -1679,7 +1811,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_6": {
 "link": "END",
-"offset": Vector2(8980, -1300),
+"offset": Vector2(8980, -1540),
 "signalValue": "DIE3"
 },
 "3_7": {

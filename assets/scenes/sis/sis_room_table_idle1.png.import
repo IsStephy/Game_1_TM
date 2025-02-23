@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c4mq0egpc2816"
+=======
+uid="uid://cr5b0o7hfmxiq"
+>>>>>>> e02d2f29b201d082d3ce498991b1182cdd9427af
 path="res://.godot/imported/sis_room_table_idle1.png-45b178b547d46d09072a0dc56a948e61.ctex"
 metadata={
 "vram_texture": false

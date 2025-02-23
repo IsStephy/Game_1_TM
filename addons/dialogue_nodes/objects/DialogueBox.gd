@@ -301,13 +301,6 @@ func is_running():
 	if _dialogue_parser:
 		return _dialogue_parser.is_running()
 	return false
-	
-
-func set_options_interactive(enabled: bool) -> void:
-	# Assuming options_container holds your option buttons.
-		for option in options_container.get_children():
-			if option is Button:
-				option.disabled = not enabled
 
 func _on_dialogue_started(id : String):
 	speaker_label.text = ''
