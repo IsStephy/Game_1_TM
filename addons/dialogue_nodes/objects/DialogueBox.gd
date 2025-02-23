@@ -260,7 +260,11 @@ func _input(event):
 		if wait_for_input_continue:
 			if event is InputEventMouseButton and event.pressed:
 				_continue_dialogue()
+<<<<<<< HEAD
 			elif event is InputEventKey and event.pressed and (event.get_keycode == KEY_SPACE or event.get_keycode == MOUSE_BUTTON_MASK_LEFT):
+=======
+			elif event is InputEventKey and event.pressed and (event.get_keycode() == KEY_SPACE or event.get_keycode() == MOUSE_BUTTON_MASK_LEFT):
+>>>>>>> a2f9e1b5e4aa3a755e3171c27812792f551e98d5
 				_continue_dialogue()
 		elif Input.is_action_just_pressed(skip_input_action):
 			if _wait_effect and not _wait_effect.skip:
@@ -302,6 +306,10 @@ func is_running():
 		return _dialogue_parser.is_running()
 	return false
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a2f9e1b5e4aa3a755e3171c27812792f551e98d5
 
 func _on_dialogue_started(id : String):
 	speaker_label.text = ''

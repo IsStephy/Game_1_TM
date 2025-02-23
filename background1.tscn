@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://db2au6q1cgaeq"]
+[gd_scene load_steps=8 format=3 uid="uid://db2au6q1cgaeq"]
 
 [ext_resource type="Script" path="res://background_1.gd" id="1_a5djk"]
 [ext_resource type="Script" path="res://canvas_layer.gd" id="1_g5yst"]
 [ext_resource type="PackedScene" uid="uid://hhm0f2nhdcni" path="res://text_field.tscn" id="1_pu77l"]
 [ext_resource type="PackedScene" uid="uid://dvuq6l8glgp1h" path="res://dead_screen.tscn" id="2_2b55l"]
 [ext_resource type="Script" path="res://dead_screen.gd" id="4_pvf3i"]
+[ext_resource type="PackedScene" uid="uid://dmntcrv8d3sfb" path="res://main_menu.tscn" id="6_vrmyb"]
 
 [sub_resource type="GDScript" id="GDScript_f8n6j"]
 script/source = "extends Control
@@ -35,3 +36,5 @@ self_modulate = Color(1, 1, 1, 0.933333)
 offset_right = 128.0
 offset_bottom = 72.0
 script = SubResource("GDScript_f8n6j")
+
+[node name="Main_Menu" parent="CanvasLayer" instance=ExtResource("6_vrmyb")]
