@@ -383,7 +383,7 @@ func _on_option_selected(idx : int):
 
 @onready var label = $"../../dead_screen/Label"
 @onready var color = $"../../dead_screen/ColorRect"
-
+@onready var texture = $"../../Sprite2D"
 
 func _on_dialogue_signal(value: String):
 	if value == "DIE0":
@@ -484,7 +484,82 @@ func _on_dialogue_signal(value: String):
 		label["theme_override_colors/font_color"] = Color.YELLOW
 		self.hide()
 		portrait.hide()
-		
+	
+	
+	if value ==  "BACK0":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK1":
+		var new_texture = preload("res://assets/scenes/dad/dad_room_idle.png")
+		texture.texture = new_texture
+	if value ==  "BACK2":
+		var new_texture = preload("res://assets/scenes/dad/dad_pc_view1.png")
+		texture.texture = new_texture
+	if value ==  "BACK3":
+		var new_texture = preload("res://assets/scenes/dad/dad_pc_view2.png")
+		texture.texture = new_texture
+	if value ==  "BACK4":
+		var new_texture = preload("res://assets/scenes/dad/dad_room_icon.png")
+		texture.texture = new_texture
+	if value ==  "BACK5":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_full.png")
+		texture.texture = new_texture
+	if value ==  "BACK6":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_table_idle1.png")
+		texture.texture = new_texture
+	if value ==  "BACK7":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_money.png")
+		texture.texture = new_texture
+	if value ==  "BACK8":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK9":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK10":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK11":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK12":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK13":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK14":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK15":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK16":
+		var new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
+		texture.texture = new_texture
+	if value ==  "BACK17":
+		var new_texture = preload("res://assets/scenes/grma/kitchen_plate.png")
+		texture.texture = new_texture
+	if value ==  "BACK18":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK19":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK20":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK21":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK22":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_night.png")
+		texture.texture = new_texture
+	if value ==  "BACK23":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	
+
 
 
 

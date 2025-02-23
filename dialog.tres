@@ -424,7 +424,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": 1
+"speaker": ""
 },
 "1_17": {
 "dialogue": "Wow, Suzie, what’s that smell?!",
@@ -1225,7 +1225,7 @@ BOOM!
 "speaker": ""
 },
 "1_7": {
-"dialogue": "\"Good choice, boy. I’ll turn this into millions.\"",
+"dialogue": "Good choice, boy. I’ll turn this into millions.",
 "offset": Vector2(1300, -1460),
 "options": {
 0: {
