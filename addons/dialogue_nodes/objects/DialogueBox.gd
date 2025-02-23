@@ -157,29 +157,39 @@ var _wait_effect : RichTextWait
 
 
 func _enter_tree():
+	# Remove any existing children from DialogueBox (if needed)
 	if get_child_count() > 0:
 		for child in get_children():
 			remove_child(child)
 			child.queue_free()
 	
-	var margin_container = MarginContainer.new()
-	add_child(margin_container)
-	margin_container.set_anchors_preset(Control.PRESET_FULL_RECT)
-	margin_container.set_offsets_preset(Control.PRESET_FULL_RECT)
-	margin_container.add_theme_constant_override('margin_left', 4)
-	margin_container.add_theme_constant_override('margin_top', 4)
-	margin_container.add_theme_constant_override('margin_right', 4)
-	margin_container.add_theme_constant_override('margin_bottom', 4)
+	# --- Get the externally created VBox ---
+	# Adjust the node path as necessary to point to your manually created VBox.
+	var external_vbox = get_node("/root/Node2D/CanvasLayer/TextField/PortraitVBox")
+	
+	# --- Create the portrait as a TextureRect and add it to the external VBox ---
+	portrait = TextureRect.new()
+	portrait.texture = sample_portrait
+	portrait.expand = true
+	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	portrait.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	portrait.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	portrait.z_index = -1   # Ensure it's behind other elements if needed.
+	portrait.visible = not hide_portrait
+	external_vbox.add_child(portrait)
+	
+	# --- Create the dialogue UI container inside the DialogueBox ---
+	var dlg_margin_container = MarginContainer.new()
+	add_child(dlg_margin_container)
+	dlg_margin_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+	dlg_margin_container.set_offsets_preset(Control.PRESET_FULL_RECT)
+	dlg_margin_container.add_theme_constant_override("margin_left", 4)
+	dlg_margin_container.add_theme_constant_override("margin_top", 4)
+	dlg_margin_container.add_theme_constant_override("margin_right", 4)
+	dlg_margin_container.add_theme_constant_override("margin_bottom", 4)
 	
 	_main_container = BoxContainer.new()
-	margin_container.add_child(_main_container)
-	
-	portrait = TextureRect.new()
-	_main_container.add_child(portrait)
-	portrait.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
-	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-	portrait.texture = sample_portrait
-	portrait.visible = not hide_portrait
+	dlg_margin_container.add_child(_main_container)
 	
 	_sub_container = BoxContainer.new()
 	_main_container.add_child(_sub_container)
@@ -188,11 +198,11 @@ func _enter_tree():
 	
 	speaker_label = Label.new()
 	_sub_container.add_child(speaker_label)
-	speaker_label.text = 'Speaker'
+	speaker_label.text = "Speaker"
 	
 	dialogue_label = RichTextLabel.new()
 	_sub_container.add_child(dialogue_label)
-	dialogue_label.text = 'Some dialogue text to demonstrate how an actual dialogue might look like.'
+	dialogue_label.text = "Some dialogue text to demonstrate how an actual dialogue might look like."
 	dialogue_label.bbcode_enabled = true
 	dialogue_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	dialogue_label.custom_effects = custom_effects
@@ -200,11 +210,13 @@ func _enter_tree():
 	options_container = BoxContainer.new()
 	_sub_container.add_child(options_container)
 	options_container.alignment = BoxContainer.ALIGNMENT_END
+	# Reapply option-related settings.
 	max_options_count = max_options_count
 	options_alignment = options_alignment
 	options_vertical = options_vertical
 	options_position = options_position
 	
+	# --- Set up the dialogue parser ---
 	_dialogue_parser = DialogueParser.new()
 	add_child(_dialogue_parser)
 	_dialogue_parser.data = data
@@ -378,48 +390,56 @@ func _on_dialogue_signal(value: String):
 		color.visible = true
 		label.text = "You were sold by your father. You die!"
 		_main_container.hide()
+		portrait.hide()
 		
 	if value == "DIE1":
 		label.visible = true
 		color.visible = true
 		label.text = "You pass out. When you wake up, you have no idea who you are. Suzie sells you to a gangster. You die!"
 		_main_container.hide()
+		portrait.hide()
 	
 	if value == "DIE2":
 		label.visible = true
 		color.visible = true
 		label.text = "You survived, you need a therapist, you couldn't take it, you killed yourself a week later"
 		_main_container.hide()
+		portrait.hide()
 	
 	if value == "DIE3":
 		label.visible = true
 		color.visible = true
 		label.text = "The creature screeches. You begin transforming into one of them. You die!"
 		_main_container.hide()
+		portrait.hide()
 	
 	if value == "DIE4":
 		label.visible = true
 		color.visible = true
 		label.text = "Granny seems not happy. She takes a flycatcher (aka muhaboika) and beats you. You die!"
 		_main_container.hide()
+		portrait.hide()
 		
 	if value == "DIE5":
 		label.visible = true
 		color.visible = true
 		label.text = "Something… flies into you??? It’s the big jar with kompot. You pass out!"
 		_main_container.hide()
+		portrait.hide()
 		
 	if value == "DIE6":
 		label.visible = true
 		color.visible = true
 		label.text = "You land on a very sharp garden gnome. You die!"
 		_main_container.hide()
+		portrait.hide()
 		
 	if value == "DIE7":
 		label.visible = true
 		color.visible = true
 		label.text = "They attack you. Die being suffocated by your family!"
 		_main_container.hide()
+		portrait.hide()
 		
 	if value == "END":
 		label.visible = true
@@ -428,6 +448,7 @@ func _on_dialogue_signal(value: String):
 		label["theme_override_colors/font_color"] = Color.YELLOW
 		label["theme_overr"]
 		_main_container.hide()
+		portrait.hide()
 		
 
 
