@@ -36,7 +36,6 @@ mouse_force_pass_scroll_events = false
 script = ExtResource("3_5rssb")
 data = ExtResource("4_8383y")
 start_id = "1"
-sample_portrait = null
 scroll_speed = -3
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_ohq7f"), SubResource("RichTextEffect_gs355"), SubResource("RichTextEffect_q8mhm")])
 options_position = 0

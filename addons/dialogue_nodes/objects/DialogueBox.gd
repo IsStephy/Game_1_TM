@@ -260,7 +260,7 @@ func _input(event):
 		if wait_for_input_continue:
 			if event is InputEventMouseButton and event.pressed:
 				_continue_dialogue()
-			elif event is InputEventKey and event.pressed and (event.scancode == KEY_SPACE or event.scancode == MOUSE_BUTTON_MASK_LEFT):
+			elif event is InputEventKey and event.pressed and (event.get_keycode == KEY_SPACE or event.get_keycode == MOUSE_BUTTON_MASK_LEFT):
 				_continue_dialogue()
 		elif Input.is_action_just_pressed(skip_input_action):
 			if _wait_effect and not _wait_effect.skip:
@@ -300,11 +300,7 @@ func select_option(idx : int):
 func is_running():
 	if _dialogue_parser:
 		return _dialogue_parser.is_running()
-<<<<<<< HEAD
 	return false
-
-=======
->>>>>>> a012d929fa34b303078365ae29a6c3ba52f3a641
 
 
 func _on_dialogue_started(id : String):
