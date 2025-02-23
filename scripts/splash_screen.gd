@@ -3,7 +3,7 @@ extends Control
 @onready var video_player = $SplashVideo
 
 func _ready():
-	video_player.stream = preload("res://assets/Logo-animation.ogv")
+	video_player.stream = preload("res://assets/hyper_mega_logo.ogv")
 	video_player.play()
 
 func _process(delta):

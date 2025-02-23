@@ -390,65 +390,99 @@ func _on_dialogue_signal(value: String):
 		label.visible = true
 		color.visible = true
 		label.text = "You were sold by your father. You die!"
-		_main_container.hide()
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 		
 	if value == "DIE1":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "You pass out. When you wake up, you have no idea who you are. Suzie sells you to a gangster. You die!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 	
 	if value == "DIE2":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "You survived, you need a therapist, you couldn't take it, you killed yourself a week later"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 	
 	if value == "DIE3":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "The creature screeches. You begin transforming into one of them. You die!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 	
 	if value == "DIE4":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "Granny seems not happy. She takes a flycatcher (aka muhaboika) and beats you. You die!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 		
 	if value == "DIE5":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "Something… flies into you??? It’s the big jar with kompot. You pass out!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 		
 	if value == "DIE6":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "You land on a very sharp garden gnome. You die!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 		
 	if value == "DIE7":
 		label.visible = true
 		color.visible = true
+		var font = FontFile.new()
+		font.font_data = load("res://assets/fonts/BloodyModes-gwwYp.ttf") 
+		label.add_theme_font_override("font", font)
 		label.text = "They attack you. Die being suffocated by your family!"
-		_main_container.hide()
+		label["theme_override_colors/font_color"] = Color.DARK_RED
+		self.hide()
 		portrait.hide()
 		
 	if value == "END":
 		label.visible = true
 		color.visible = true
+		#var font = FontFile.new()
+		#font.font_data = load("") 
+		#label.add_theme_font_override("font", font)
 		label.text = "Congratulation you survived"
 		label["theme_override_colors/font_color"] = Color.YELLOW
-		label["theme_overr"]
-		_main_container.hide()
+		self.hide()
 		portrait.hide()
 		
 

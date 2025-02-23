@@ -26,9 +26,8 @@ grow_vertical = 2
 script = ExtResource("1_15y2e")
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 layout_mode = 2
-offset_left = 336.0
+offset_left = 302.0
 offset_top = 450.0
 offset_right = 1185.0
 offset_bottom = 682.0
@@ -44,6 +43,6 @@ hide_on_dialogue_end = false
 [node name="PortraitVBox" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 22.0
-offset_top = 264.0
-offset_right = 325.0
-offset_bottom = 698.0
+offset_top = 447.0
+offset_right = 280.0
+offset_bottom = 680.0

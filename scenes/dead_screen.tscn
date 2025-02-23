@@ -12,18 +12,18 @@ grow_vertical = 2
 modulate = Color(0.954014, 0.95944, 0.983508, 1)
 top_level = true
 layout_mode = 0
-offset_left = 83.0
-offset_top = 119.0
-offset_right = 1190.0
-offset_bottom = 652.0
+offset_left = 101.0
+offset_top = 46.0
+offset_right = 1147.0
+offset_bottom = 690.0
 mouse_default_cursor_shape = 5
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 80
 text = "This is a sample text"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 uppercase = true
-max_lines_visible = 2
+max_lines_visible = 4
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
