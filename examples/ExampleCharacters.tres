@@ -37,7 +37,7 @@ nodes = {
 "text": ""
 }
 },
-"size": Vector2(300, 275),
+"size": Vector2(300, 280),
 "speaker": 0
 },
 "1_3": {
@@ -56,4 +56,4 @@ nodes = {
 }
 variables = {}
 strays = Array[String]([])
-characters = "res://examples/Characters.tres"
+characters = "res://Characters.tres"

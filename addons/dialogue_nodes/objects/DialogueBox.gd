@@ -319,12 +319,18 @@ func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[S
 		speaker_label.text = speaker.name
 		speaker_label.modulate = speaker.color
 		portrait.texture = speaker.image
-		if not speaker.image:
-			portrait.hide()
-	elif speaker is String:
+		portrait.show()
+		#if not speaker.image:
+		#	portrait.hide()
+	elif speaker is String and speaker != "":
+		speaker_label.text = speaker
+		speaker_label.modulate = Color.WHITE
+		#portrait.hide()
+	elif speaker is String and speaker == "":
 		speaker_label.text = speaker
 		speaker_label.modulate = Color.WHITE
 		portrait.hide()
+	
 
 	dialogue_label.text = _dialogue_parser._update_wait_tags(dialogue_label, dialogue)
 	dialogue_label.get_v_scroll_bar().set_value_no_signal(0)

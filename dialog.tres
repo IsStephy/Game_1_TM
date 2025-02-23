@@ -511,7 +511,7 @@ nodes = {
 "text": "3. Call the Cops on Her"
 }
 },
-"size": Vector2(300, 322),
+"size": Vector2(300, 323),
 "speaker": 2
 },
 "1_23": {
@@ -1070,7 +1070,7 @@ BOOM!
 "text": "3. Give a Toothpick"
 }
 },
-"size": Vector2(300, 322),
+"size": Vector2(300, 323),
 "speaker": 1
 },
 "1_60": {
