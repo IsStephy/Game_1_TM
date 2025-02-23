@@ -4,7 +4,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-@onready var dialoguebox = $"../TextField/DialogueBox"
 @onready var exit_but = $Exit_Button
 @onready var continue_but = $Continue_Button
 @onready var start_but = $Start_Button
@@ -41,7 +40,11 @@ func _on_continue_button_pressed() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	dialoguebox.start("1")
+	var dialoguebox = $"../TextField/DialogueBox"
+	if dialoguebox:
+		dialoguebox.start("1")
+
+	get_tree().call_deferred("change_scene_to_file", "res://background1.tscn")
 
 
 func _on_load_button_pressed() -> void:

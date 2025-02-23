@@ -26,6 +26,8 @@ auto_translate_mode = 1
 transform = Transform2D(1, 4.76995e-08, -4.76995e-08, 1, 0, 0)
 script = ExtResource("1_g5yst")
 
+[node name="Main_Menu" parent="CanvasLayer" instance=ExtResource("6_vrmyb")]
+
 [node name="dead_screen" parent="CanvasLayer" instance=ExtResource("2_2b55l")]
 offset_right = 128.0
 offset_bottom = 72.0
@@ -36,5 +38,3 @@ self_modulate = Color(1, 1, 1, 0.933333)
 offset_right = 128.0
 offset_bottom = 72.0
 script = SubResource("GDScript_f8n6j")
-
-[node name="Main_Menu" parent="CanvasLayer" instance=ExtResource("6_vrmyb")]
