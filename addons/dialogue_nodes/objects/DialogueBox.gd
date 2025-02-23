@@ -298,7 +298,8 @@ func select_option(idx : int):
 
 ## Returns [code]true[/code] if the [DialogueBox] is processing a dialogue tree.
 func is_running():
-	return _dialogue_parser.is_running()
+	if _dialogue_parser:
+		return _dialogue_parser.is_running()
 
 
 func _on_dialogue_started(id : String):

@@ -21,11 +21,17 @@ func _on_button_pressed():
 script = ExtResource("1_a5djk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+auto_translate_mode = 1
+transform = Transform2D(1, 4.76995e-08, -4.76995e-08, 1, 0, 0)
 script = ExtResource("1_g5yst")
 
 [node name="dead_screen" parent="CanvasLayer" instance=ExtResource("2_2b55l")]
+offset_right = 128.0
+offset_bottom = 72.0
 script = ExtResource("4_pvf3i")
 
 [node name="TextField" parent="CanvasLayer" instance=ExtResource("1_pu77l")]
 self_modulate = Color(1, 1, 1, 0.933333)
+offset_right = 128.0
+offset_bottom = 72.0
 script = SubResource("GDScript_f8n6j")
