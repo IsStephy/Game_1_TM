@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbhdk54aiij64"]
 
-[ext_resource type="Script" path="res://splash_screen.gd" id="1_7c80l"]
+[ext_resource type="Script" path="res://scripts/splash_screen.gd" id="1_7c80l"]
 [ext_resource type="VideoStream" path="res://assets/Logo-animation.ogv" id="1_oks1y"]
-[ext_resource type="Script" path="res://video_stream_player_2.gd" id="3_tt3hu"]
+[ext_resource type="Script" path="res://scripts/video_stream_player_2.gd" id="3_tt3hu"]
 
 [node name="SplashScreen" type="Control"]
 layout_mode = 3

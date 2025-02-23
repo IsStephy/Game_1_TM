@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://db2au6q1cgaeq"]
+
+[ext_resource type="Script" path="res://scripts/background_1.gd" id="1_t7nra"]
+[ext_resource type="Script" path="res://scripts/canvas_layer.gd" id="2_1ofrr"]
+[ext_resource type="PackedScene" uid="uid://dmntcrv8d3sfb" path="res://scenes/main_menu.tscn" id="3_nsg7t"]
+[ext_resource type="PackedScene" uid="uid://dvuq6l8glgp1h" path="res://scenes/dead_screen.tscn" id="4_8uibw"]
+[ext_resource type="Script" path="res://scripts/dead_screen.gd" id="5_jcn4o"]
+[ext_resource type="PackedScene" uid="uid://hhm0f2nhdcni" path="res://scenes/text_field.tscn" id="6_l6nbq"]
+
+[sub_resource type="GDScript" id="GDScript_f8n6j"]
+script/source = "extends Control
+
+
+@onready var dialogue_box = $DialogueBox
+
+
+func _on_button_pressed():
+	dialogue_box.start('1')
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t7nra")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+auto_translate_mode = 1
+transform = Transform2D(1, 4.76995e-08, -4.76995e-08, 1, 0, 0)
+script = ExtResource("2_1ofrr")
+
+[node name="dead_screen" parent="CanvasLayer" instance=ExtResource("4_8uibw")]
+offset_right = 128.0
+offset_bottom = 72.0
+script = ExtResource("5_jcn4o")
+
+[node name="TextField" parent="CanvasLayer" instance=ExtResource("6_l6nbq")]
+self_modulate = Color(1, 1, 1, 0.933333)
+offset_right = 128.0
+offset_bottom = 72.0
+script = SubResource("GDScript_f8n6j")
+
+[node name="Main_Menu" parent="CanvasLayer" instance=ExtResource("3_nsg7t")]

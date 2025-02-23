@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://hhm0f2nhdcni"]
 
-[ext_resource type="Script" path="res://text_field.gd" id="1_15y2e"]
+[ext_resource type="Script" path="res://scripts/text_field.gd" id="1_15y2e"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueBox.gd" id="3_5rssb"]
 [ext_resource type="Resource" uid="uid://80ompw780k36" path="res://dialog.tres" id="4_8383y"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_j5op0"]

@@ -44,7 +44,7 @@ func _on_start_button_pressed() -> void:
 	if dialoguebox:
 		dialoguebox.start("1")
 
-	get_tree().call_deferred("change_scene_to_file", "res://background1.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/background1.tscn")
 
 
 func _on_load_button_pressed() -> void:
