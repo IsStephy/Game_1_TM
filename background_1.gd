@@ -8,8 +8,8 @@ extends Node2D
 func _ready() -> void:
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	color.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	label.hide()
-	color.hide()
+	label.visible = false
+	color.visible = false
 
 	
 	dialogue_box.start('1')

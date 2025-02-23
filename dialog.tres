@@ -263,7 +263,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_9",
 "text": ""
 }
 },
@@ -393,7 +393,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_3",
 "text": ""
 }
 },
@@ -745,7 +745,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_5",
 "text": ""
 }
 },
@@ -886,7 +886,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_53",
+"link": &"3_4",
 "text": ""
 }
 },
@@ -946,13 +946,12 @@ BOOM!
 "speaker": 3
 },
 "1_52": {
-"dialogue": "(The creature screeches. You begin transforming into one of them.)
-(You die.)",
+"dialogue": "(The creature screeches. You begin transforming into one of them.)",
 "offset": Vector2(8640, -1300),
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_6",
 "text": ""
 }
 },
@@ -1385,7 +1384,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_7",
 "text": ""
 }
 },
@@ -1438,7 +1437,7 @@ The round or square chair, without a back[/i]) in the window.)",
 "options": {
 0: {
 "condition": {},
-"link": &"3_1",
+"link": &"3_8",
 "text": ""
 }
 },
@@ -1655,13 +1654,48 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_1": {
 "link": "END",
-"offset": Vector2(22061.1, -1596.39),
-"signalValue": "DIE"
+"offset": Vector2(21940, -1260),
+"signalValue": "DIE7"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(22432.6, -456.484),
+"offset": Vector2(22280, -660),
 "signalValue": "END"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(2362.32, -545.39),
+"signalValue": "DIE0"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2(8640, -1000),
+"signalValue": "DIE2"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2(7308.01, -1184.42),
+"signalValue": "DIE1"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2(8980, -1300),
+"signalValue": "DIE3"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2(18200, -1560),
+"signalValue": "DIE4"
+},
+"3_8": {
+"link": "END",
+"offset": Vector2(18540, -1300),
+"signalValue": "DIE5"
+},
+"3_9": {
+"link": "END",
+"offset": Vector2(20580, -960),
+"signalValue": "DIE6"
 }
 }
 variables = {}
