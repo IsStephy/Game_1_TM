@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var label = $dead_screen/Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.size = Vector2(800, 600)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
