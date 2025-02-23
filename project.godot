@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Me_and_My_Absolutely_Normal_Family"
-run/main_scene="res://text_field.tscn"
+run/main_scene="res://background1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -367,8 +367,20 @@ func _on_option_selected(idx : int):
 	option_selected.emit(idx)
 
 
-func _on_dialogue_signal(value : String):
-	dialogue_signal.emit(value)
+
+@onready var label = $"../../dead_screen/Label"
+@onready var color = $"../../dead_screen/ColorRect"
+
+
+func _on_dialogue_signal(value: String):
+	if value == "DIE":
+		label.show()
+		color.show()
+		#label.mouse_filter = Control.MOUSE_FILTER_STOP
+		#color.mouse_filter = Control.MOUSE_FILTER_STOP
+		label.text = "You have died!"
+		_main_container.hide()
+
 
 
 func _on_variable_changed(variable_name : String, value):

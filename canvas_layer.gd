@@ -1,6 +1,6 @@
-extends Control
+extends CanvasLayer
 
-@onready var dialogue_box = $DialogueBox
+@onready var label = $dead_screen/Label
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
