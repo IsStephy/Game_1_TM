@@ -157,29 +157,39 @@ var _wait_effect : RichTextWait
 
 
 func _enter_tree():
+	# Remove any existing children.
 	if get_child_count() > 0:
 		for child in get_children():
 			remove_child(child)
 			child.queue_free()
+
+	# --- Create the portrait as a standalone node ---
+	portrait = TextureRect.new()
+	add_child(portrait)  # Add directly to the DialogueBox.
+	portrait.texture = sample_portrait
+	portrait.scale = Vector2(2, 2)  # Scale the portrait 3 times larger.
+	portrait.z_index = -1                # Render it behind the dialogue UI.
+	portrait.visible = not hide_portrait
+	# Set anchors to center (adjust as needed)
+	portrait.anchor_left = 0.5
+	portrait.anchor_top = 0.5
+	portrait.anchor_right = 0.5
+	portrait.anchor_bottom = 0.5
+	portrait.position = Vector2(-100, -500)
 	
-	var margin_container = MarginContainer.new()
-	add_child(margin_container)
-	margin_container.set_anchors_preset(Control.PRESET_FULL_RECT)
-	margin_container.set_offsets_preset(Control.PRESET_FULL_RECT)
-	margin_container.add_theme_constant_override('margin_left', 4)
-	margin_container.add_theme_constant_override('margin_top', 4)
-	margin_container.add_theme_constant_override('margin_right', 4)
-	margin_container.add_theme_constant_override('margin_bottom', 4)
+	# --- Create the dialogue UI container ---
+	# Renaming the margin container to avoid conflicts.
+	var dlg_margin_container = MarginContainer.new()
+	add_child(dlg_margin_container)
+	dlg_margin_container.set_anchors_preset(Control.PRESET_FULL_RECT)
+	dlg_margin_container.set_offsets_preset(Control.PRESET_FULL_RECT)
+	dlg_margin_container.add_theme_constant_override("margin_left", 4)
+	dlg_margin_container.add_theme_constant_override("margin_top", 4)
+	dlg_margin_container.add_theme_constant_override("margin_right", 4)
+	dlg_margin_container.add_theme_constant_override("margin_bottom", 4)
 	
 	_main_container = BoxContainer.new()
-	margin_container.add_child(_main_container)
-	
-	portrait = TextureRect.new()
-	_main_container.add_child(portrait)
-	portrait.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
-	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT
-	portrait.texture = sample_portrait
-	portrait.visible = not hide_portrait
+	dlg_margin_container.add_child(_main_container)
 	
 	_sub_container = BoxContainer.new()
 	_main_container.add_child(_sub_container)
@@ -188,11 +198,11 @@ func _enter_tree():
 	
 	speaker_label = Label.new()
 	_sub_container.add_child(speaker_label)
-	speaker_label.text = 'Speaker'
+	speaker_label.text = "Speaker"
 	
 	dialogue_label = RichTextLabel.new()
 	_sub_container.add_child(dialogue_label)
-	dialogue_label.text = 'Some dialogue text to demonstrate how an actual dialogue might look like.'
+	dialogue_label.text = "Some dialogue text to demonstrate how an actual dialogue might look like."
 	dialogue_label.bbcode_enabled = true
 	dialogue_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	dialogue_label.custom_effects = custom_effects
@@ -200,11 +210,13 @@ func _enter_tree():
 	options_container = BoxContainer.new()
 	_sub_container.add_child(options_container)
 	options_container.alignment = BoxContainer.ALIGNMENT_END
+	# Reapply option-related settings.
 	max_options_count = max_options_count
 	options_alignment = options_alignment
 	options_vertical = options_vertical
 	options_position = options_position
 	
+	# --- Set up the dialogue parser ---
 	_dialogue_parser = DialogueParser.new()
 	add_child(_dialogue_parser)
 	_dialogue_parser.data = data
@@ -217,6 +229,7 @@ func _enter_tree():
 	_dialogue_parser.dialogue_signal.connect(_on_dialogue_signal)
 	_dialogue_parser.variable_changed.connect(_on_variable_changed)
 	_dialogue_parser.dialogue_ended.connect(_on_dialogue_ended)
+
 
 
 func _ready():
