@@ -20,11 +20,8 @@ func explode(_a=0):
 
 func _on_Button_pressed():
 	if not dialogue_box.is_running():
-<<<<<<< HEAD
 		dialogue_box.start()
-=======
 		dialogue_box.start('1')
->>>>>>> acce819c21ac450449b3bce66a45ff17a4ce0b9d
 
 
 func _on_dialogue_signal(value):
