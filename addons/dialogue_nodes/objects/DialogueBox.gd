@@ -514,25 +514,22 @@ func _on_dialogue_signal(value: String):
 		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
 		texture.texture = new_texture
 	if value ==  "BACK9":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_closed.png")
 		texture.texture = new_texture
 	if value ==  "BACK10":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/new/sis_room/sis_room_meh.png")
 		texture.texture = new_texture
 	if value ==  "BACK11":
 		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
 		texture.texture = new_texture
 	if value ==  "BACK12":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
-		texture.texture = new_texture
-	if value ==  "BACK13":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/mum/bedroom.png")
 		texture.texture = new_texture
 	if value ==  "BACK14":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_open.png")
 		texture.texture = new_texture
 	if value ==  "BACK15":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_closed.png")
 		texture.texture = new_texture
 	if value ==  "BACK16":
 		var new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
@@ -550,7 +547,7 @@ func _on_dialogue_signal(value: String):
 		var new_texture = preload("res://assets/scenes/bro/bro_room_night.png")
 		texture.texture = new_texture
 	if value ==  "BACK23":
-		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		var new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
 		texture.texture = new_texture
 	
 
