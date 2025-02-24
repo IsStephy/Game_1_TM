@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=11 format=3 uid="uid://di21ijmfa2s22"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=14 format=3 uid="uid://di21ijmfa2s22"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_7hijy"]
-[ext_resource type="Texture2D" uid="uid://b2hbqv3slgfxt" path="res://examples/profile0.png" id="2_188me"]
 [ext_resource type="Texture2D" uid="uid://biqmh7fjuxnu0" path="res://assets/broski/bro_idle.png" id="2_vw5ia"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="3_h8i5a"]
+[ext_resource type="Texture2D" uid="uid://dhln64twxw6lo" path="res://assets/scenes/new/dad/dad_idle.png" id="3_rxa5u"]
 [ext_resource type="Texture2D" uid="uid://bknen6r0vpfbw" path="res://assets/sis/sis_idle.png" id="4_oxagn"]
+[ext_resource type="Texture2D" uid="uid://cdd5aqhpxn2x8" path="res://assets/scenes/new/mom/mom_idle.png" id="5_oe122"]
+[ext_resource type="Texture2D" uid="uid://xc2a7ufeo6w0" path="res://assets/scenes/new/monster/monstertruck.png" id="6_l7wtp"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("1_7hijy")
@@ -15,7 +17,7 @@ color = Color(0.249001, 0.537562, 0.655095, 1)
 [sub_resource type="Resource" id="2"]
 script = ExtResource("1_7hijy")
 name = "DADDY"
-image = ExtResource("2_188me")
+image = ExtResource("3_rxa5u")
 color = Color(0.844184, 0.590322, 0.899464, 1)
 
 [sub_resource type="Resource" id="Resource_uc76g"]
@@ -27,6 +29,7 @@ color = Color(1, 1, 0.52549, 1)
 [sub_resource type="Resource" id="Resource_ugpaf"]
 script = ExtResource("1_7hijy")
 name = "MOTHER"
+image = ExtResource("5_oe122")
 color = Color(0, 0.84595, 0.429763, 1)
 
 [sub_resource type="Resource" id="Resource_siu21"]
@@ -34,6 +37,12 @@ script = ExtResource("1_7hijy")
 name = "GRANNY"
 color = Color(0.895054, 0.355317, 5.77569e-07, 1)
 
+[sub_resource type="Resource" id="Resource_3klgs"]
+script = ExtResource("1_7hijy")
+name = "CREATURE"
+image = ExtResource("6_l7wtp")
+color = Color(0.131798, 0.614841, 1.92523e-07, 1)
+
 [resource]
 script = ExtResource("3_h8i5a")
-characters = Array[ExtResource("1_7hijy")]([SubResource("1"), SubResource("2"), SubResource("Resource_uc76g"), SubResource("Resource_ugpaf"), SubResource("Resource_siu21")])
+characters = Array[ExtResource("1_7hijy")]([SubResource("1"), SubResource("2"), SubResource("Resource_uc76g"), SubResource("Resource_ugpaf"), SubResource("Resource_siu21"), SubResource("Resource_3klgs")])

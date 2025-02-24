@@ -374,6 +374,19 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": ""
 },
+"1_123": {
+"dialogue": "arkgajrhhrgrw",
+"offset": Vector2(9000, -1560),
+"options": {
+0: {
+"condition": {},
+"link": &"3_6",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": 0
+},
 "1_13": {
 "dialogue": "A toothpick? Are you insane? Do you know what happens if I lose this bet?!",
 "offset": Vector2(1360, -460),
@@ -942,7 +955,7 @@ BOOM!
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": 5
 },
 "1_51": {
 "dialogue": "Oh, sweetheart! Meet your real father",
@@ -950,7 +963,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"3_23",
+"link": &"1_52",
 "text": ""
 }
 },
@@ -963,7 +976,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"3_6",
+"link": &"3_35",
 "text": ""
 }
 },
@@ -1739,11 +1752,6 @@ The round or square chair, without a back[/i]) in the window.)",
 "offset": Vector2(7400, -1620),
 "signalValue": "BACK12"
 },
-"3_23": {
-"link": &"1_52",
-"offset": Vector2(8500, -1700),
-"signalValue": "BACK13"
-},
 "3_24": {
 "link": &"1_46",
 "offset": Vector2(7320, -1000),
@@ -1799,6 +1807,11 @@ The round or square chair, without a back[/i]) in the window.)",
 "offset": Vector2(20500, -300),
 "signalValue": "BACK23"
 },
+"3_35": {
+"link": &"1_123",
+"offset": Vector2(8820, -1760),
+"signalValue": "CHAR5"
+},
 "3_4": {
 "link": "END",
 "offset": Vector2(8640, -1000),
@@ -1811,7 +1824,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_6": {
 "link": "END",
-"offset": Vector2(8980, -1540),
+"offset": Vector2(9360, -1660),
 "signalValue": "DIE3"
 },
 "3_7": {
