@@ -48,7 +48,7 @@ var characters : Array[Character]
 
 var _running := false
 var _option_links := []
-
+var current_node_name: String = ""
 
 ## Loads the [param DialogueData] resource from the given [param path]. The loaded resource can be accessed using [member data].
 func load_data(path : String):
@@ -98,22 +98,39 @@ func is_running(): return _running
 
 # Proceeds the parser to the next node and runs its corresponding _process_* function.
 func _proceed(node_name : String):
+	current_node_name = node_name
 	if node_name == 'END' or not _running:
 		stop()
 		return
-	
+
 	var process_functions := [
 		_process_start,
 		_process_dialogue,
-		func(): pass, # comment
+		func(): pass,
 		_process_signal,
 		_process_set,
 		_process_condition
-	]
-	
+		]
+
 	var id := int(node_name.split('_')[0])
-	
 	process_functions[id].call(data.nodes[node_name])
+	
+# Returns a dictionary that holds the current dialogue state.
+func get_save_data() -> Dictionary:
+	return {
+		"current_node_name": current_node_name,
+		"variables": variables
+	}
+	
+func load_save_data(save_data: Dictionary) -> void:
+	if save_data.has("current_node_name"):
+		current_node_name = save_data["current_node_name"]
+	if save_data.has("variables"):
+		variables = save_data["variables"]
+	_running = true
+	_proceed(current_node_name)
+
+
 
 
 # Processes the start node data (dict).
