@@ -272,7 +272,7 @@ nodes = {
 },
 "1_116": {
 "dialogue": "(You go to bed. The next morning, everything is normal.)",
-"offset": Vector2(20240, -660),
+"offset": Vector2(20340, -260),
 "options": {
 0: {
 "condition": {},
@@ -285,7 +285,7 @@ nodes = {
 },
 "1_117": {
 "dialogue": "Morning, champ! Off to work",
-"offset": Vector2(20580, -660),
+"offset": Vector2(20680, -260),
 "options": {
 0: {
 "condition": {},
@@ -298,7 +298,7 @@ nodes = {
 },
 "1_118": {
 "dialogue": "Studying hard today!",
-"offset": Vector2(20920, -660),
+"offset": Vector2(21020, -260),
 "options": {
 0: {
 "condition": {},
@@ -311,7 +311,7 @@ nodes = {
 },
 "1_119": {
 "dialogue": "Pancakes, sweetheart?",
-"offset": Vector2(21260, -660),
+"offset": Vector2(21360, -260),
 "options": {
 0: {
 "condition": {},
@@ -337,7 +337,7 @@ nodes = {
 },
 "1_120": {
 "dialogue": "(You stare in horror. Were you dreaming? Or did they reset things?Did you take some of Suzies potions earlier?You have Dementia?)",
-"offset": Vector2(21600, -660),
+"offset": Vector2(21700, -260),
 "options": {
 0: {
 "condition": {},
@@ -350,7 +350,7 @@ nodes = {
 },
 "1_121": {
 "dialogue": "(The good news is that you survive... for now)))))).)",
-"offset": Vector2(21940, -660),
+"offset": Vector2(22040, -260),
 "options": {
 0: {
 "condition": {},
@@ -445,7 +445,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_18",
+"link": &"3_39",
 "text": ""
 }
 },
@@ -523,7 +523,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_28",
+"link": &"3_49",
 "text": "1. Help Mix Ingredients"
 },
 1: {
@@ -533,16 +533,16 @@ nodes = {
 },
 2: {
 "condition": {},
-"link": &"1_23",
+"link": &"3_42",
 "text": "3. Call the Cops on Her"
 }
 },
-"size": Vector2(300, 323),
+"size": Vector2(300, 320),
 "speaker": 2
 },
 "1_23": {
 "dialogue": "(You grab the phone.)",
-"offset": Vector2(4880, -700),
+"offset": Vector2(4940, -360),
 "options": {
 0: {
 "condition": {},
@@ -554,8 +554,8 @@ nodes = {
 "speaker": ""
 },
 "1_24": {
-"dialogue": "\"Hello, police? My sister is literally Breaking Bad-ing in our house.",
-"offset": Vector2(5240, -700),
+"dialogue": "Hello, police? My sister is literally Breaking Bad-ing in our house.",
+"offset": Vector2(5300, -360),
 "options": {
 0: {
 "condition": {},
@@ -568,7 +568,7 @@ nodes = {
 },
 "1_25": {
 "dialogue": "(Police arrive in a few minuts. Suzie gets arrested.)",
-"offset": Vector2(5580, -700),
+"offset": Vector2(5640, -360),
 "options": {
 0: {
 "condition": {},
@@ -581,11 +581,11 @@ nodes = {
 },
 "1_26": {
 "dialogue": "You snitch! I HOPE YOUR GOLDFISH DROWNS!!!!!?!!!!",
-"offset": Vector2(5920, -700),
+"offset": Vector2(5980, -360),
 "options": {
 0: {
 "condition": {},
-"link": &"1_27",
+"link": &"3_43",
 "text": ""
 }
 },
@@ -595,7 +595,7 @@ nodes = {
 "1_27": {
 "dialogue": "(You survive, but at what cost?
 You leave her room when you hear something. The sound was from the MOTHER's room)",
-"offset": Vector2(6260, -700),
+"offset": Vector2(6360, -680),
 "options": {
 0: {
 "condition": {},
@@ -666,7 +666,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_32",
+"link": &"3_44",
 "text": ""
 }
 },
@@ -675,7 +675,7 @@ BOOM!
 },
 "1_32": {
 "dialogue": "(You leave her room when you hear something. The sound was from the MOTHER's room)",
-"offset": Vector2(6500, -1000),
+"offset": Vector2(6780, -980),
 "options": {
 0: {
 "condition": {},
@@ -688,11 +688,11 @@ BOOM!
 },
 "1_33": {
 "dialogue": "(Suzie hands you a drink.)",
-"offset": Vector2(4880, -1300),
+"offset": Vector2(4880, -1280),
 "options": {
 0: {
 "condition": {},
-"link": &"1_34",
+"link": &"3_41",
 "text": ""
 }
 },
@@ -783,7 +783,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_5",
+"link": &"3_37",
 "text": ""
 }
 },
@@ -792,7 +792,7 @@ BOOM!
 },
 "1_40": {
 "dialogue": "Mom? Can I come in?",
-"offset": Vector2(6600, -700),
+"offset": Vector2(6640, -280),
 "options": {
 0: {
 "condition": {},
@@ -805,7 +805,7 @@ BOOM!
 },
 "1_41": {
 "dialogue": "Go away, sweetheart. Mommy’s busy",
-"offset": Vector2(6942, -696),
+"offset": Vector2(6980, -280),
 "options": {
 0: {
 "condition": {},
@@ -818,7 +818,7 @@ BOOM!
 },
 "1_42": {
 "dialogue": "(your next move is important for your family what you do?",
-"offset": Vector2(7282, -696),
+"offset": Vector2(7220, -820),
 "options": {
 0: {
 "condition": {},
@@ -884,7 +884,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_47",
+"link": &"3_51",
 "text": ""
 }
 },
@@ -924,7 +924,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_50",
+"link": &"3_48",
 "text": ""
 }
 },
@@ -989,7 +989,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_54",
+"link": &"3_54",
 "text": ""
 }
 },
@@ -1212,12 +1212,12 @@ BOOM!
 },
 1: {
 "condition": {},
-"link": &"1_87",
+"link": &"3_55",
 "text": "2. Call the Cops"
 },
 2: {
 "condition": {},
-"link": &"1_88",
+"link": &"3_56",
 "text": "3. Try to find an excuse"
 }
 },
@@ -1269,7 +1269,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_72",
+"link": &"3_58",
 "text": ""
 }
 },
@@ -1683,18 +1683,18 @@ The round or square chair, without a back[/i]) in the window.)",
 "signalValue": "DIE7"
 },
 "3_10": {
-"link": &"1_122",
-"offset": Vector2(-1380, -820),
+"link": &"3_23",
+"offset": Vector2(-1480, -900),
 "signalValue": "BACK0"
 },
 "3_11": {
-"link": &"1_3",
-"offset": Vector2(-940, -820),
+"link": &"3_34",
+"offset": Vector2(-1000, -900),
 "signalValue": "BACK1"
 },
 "3_12": {
-"link": &"1_4",
-"offset": Vector2(140, -840),
+"link": &"3_36",
+"offset": Vector2(0, -840),
 "signalValue": "BACK2"
 },
 "3_13": {
@@ -1708,13 +1708,13 @@ The round or square chair, without a back[/i]) in the window.)",
 "signalValue": "BACK4"
 },
 "3_15": {
-"link": &"1_16",
+"link": &"3_38",
 "offset": Vector2(2506.29, -1003.79),
 "signalValue": "BACK5"
 },
 "3_16": {
-"link": &"1_21",
-"offset": Vector2(4020, -800),
+"link": &"3_40",
+"offset": Vector2(3920, -840),
 "signalValue": "BACK6"
 },
 "3_17": {
@@ -1724,17 +1724,17 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_18": {
 "link": &"1_25",
-"offset": Vector2(5580, -820),
+"offset": Vector2(5540, -500),
 "signalValue": "BACK8"
 },
 "3_19": {
-"link": &"1_40",
-"offset": Vector2(6840, -1000),
+"link": &"3_45",
+"offset": Vector2(6920, -620),
 "signalValue": "BACK9"
 },
 "3_2": {
 "link": "END",
-"offset": Vector2(22280, -660),
+"offset": Vector2(22380, -260),
 "signalValue": "END"
 },
 "3_20": {
@@ -1748,28 +1748,33 @@ The round or square chair, without a back[/i]) in the window.)",
 "signalValue": "BACK11"
 },
 "3_22": {
-"link": &"1_49",
-"offset": Vector2(7400, -1620),
+"link": &"3_46",
+"offset": Vector2(7320, -1660),
 "signalValue": "BACK12"
 },
+"3_23": {
+"link": &"1_122",
+"offset": Vector2(-1240, -900),
+"signalValue": "MUS0"
+},
 "3_24": {
-"link": &"1_46",
-"offset": Vector2(7320, -1000),
+"link": &"3_47",
+"offset": Vector2(7320, -1080),
 "signalValue": "BACK14"
 },
 "3_25": {
-"link": &"1_48",
-"offset": Vector2(8160, -1120),
+"link": &"3_52",
+"offset": Vector2(8160, -1220),
 "signalValue": "BACK15"
 },
 "3_26": {
-"link": &"1_53",
-"offset": Vector2(8552.76, -340.257),
+"link": &"3_53",
+"offset": Vector2(8540, -280),
 "signalValue": "BACK16"
 },
 "3_27": {
-"link": &"1_56",
-"offset": Vector2(9520, -380),
+"link": &"3_60",
+"offset": Vector2(9420, -840),
 "signalValue": "BACK17"
 },
 "3_28": {
@@ -1798,34 +1803,164 @@ The round or square chair, without a back[/i]) in the window.)",
 "signalValue": "BACK21"
 },
 "3_32": {
-"link": &"1_116",
+"link": &"3_57",
 "offset": Vector2(20040, -260),
 "signalValue": "BACK22"
 },
 "3_33": {
-"link": &"1_117",
-"offset": Vector2(20500, -300),
+"link": &"3_59",
+"offset": Vector2(20440, -380),
 "signalValue": "BACK23"
 },
+"3_34": {
+"link": &"1_3",
+"offset": Vector2(-760, -900),
+"signalValue": "MUS1"
+},
 "3_35": {
-"link": &"1_123",
+"link": &"3_50",
 "offset": Vector2(8820, -1760),
 "signalValue": "CHAR0"
+},
+"3_36": {
+"link": &"1_4",
+"offset": Vector2(260, -840),
+"signalValue": "MUS2"
+},
+"3_37": {
+"link": &"1_5",
+"offset": Vector2(520, -840),
+"signalValue": "MUS3"
+},
+"3_38": {
+"link": &"1_16",
+"offset": Vector2(2780, -1000),
+"signalValue": "MUS4"
+},
+"3_39": {
+"link": &"1_18",
+"offset": Vector2(2960, -820),
+"signalValue": "MUS5"
 },
 "3_4": {
 "link": "END",
 "offset": Vector2(8640, -1000),
 "signalValue": "DIE2"
 },
+"3_40": {
+"link": &"1_21",
+"offset": Vector2(4160, -840),
+"signalValue": "MUS6"
+},
+"3_41": {
+"link": &"1_34",
+"offset": Vector2(5120, -1440),
+"signalValue": "MUS7"
+},
+"3_42": {
+"link": &"1_23",
+"offset": Vector2(4860, -580),
+"signalValue": "MUS8"
+},
+"3_43": {
+"link": &"1_27",
+"offset": Vector2(6100, -660),
+"signalValue": "MUS1"
+},
+"3_44": {
+"link": &"1_32",
+"offset": Vector2(6520, -980),
+"signalValue": "MUS1"
+},
+"3_45": {
+"link": &"1_40",
+"offset": Vector2(6920, -520),
+"signalValue": "MUS9"
+},
+"3_46": {
+"link": &"1_49",
+"offset": Vector2(7320, -1560),
+"signalValue": "MUS1"
+},
+"3_47": {
+"link": &"1_46",
+"offset": Vector2(7320, -980),
+"signalValue": "MUS1"
+},
+"3_48": {
+"link": &"1_50",
+"offset": Vector2(7840, -1700),
+"signalValue": "MUS10"
+},
+"3_49": {
+"link": &"1_28",
+"offset": Vector2(4860, -680),
+"signalValue": "MUS11"
+},
 "3_5": {
 "link": "END",
 "offset": Vector2(7308.01, -1184.42),
 "signalValue": "DIE1"
 },
+"3_50": {
+"link": &"1_123",
+"offset": Vector2(8820, -1660),
+"signalValue": "MUS11"
+},
+"3_51": {
+"link": &"1_47",
+"offset": Vector2(7883.65, -1137.21),
+"signalValue": "MUS11"
+},
+"3_52": {
+"link": &"1_48",
+"offset": Vector2(8160, -1120),
+"signalValue": "MUS1"
+},
+"3_53": {
+"link": &"1_53",
+"offset": Vector2(8540, -380),
+"signalValue": "MUS1"
+},
+"3_54": {
+"link": &"1_54",
+"offset": Vector2(8860, -360),
+"signalValue": "MUS12"
+},
+"3_55": {
+"link": &"1_87",
+"offset": Vector2(13860, -1000),
+"signalValue": "MUS8"
+},
+"3_56": {
+"link": &"1_88",
+"offset": Vector2(14000, -340),
+"signalValue": "MUS12"
+},
+"3_57": {
+"link": &"1_116",
+"offset": Vector2(20040, -120),
+"signalValue": "MUS0"
+},
+"3_58": {
+"link": &"1_72",
+"offset": Vector2(15128.7, -1735.84),
+"signalValue": "MUS13"
+},
+"3_59": {
+"link": &"1_117",
+"offset": Vector2(20700, -380),
+"signalValue": "MUS14"
+},
 "3_6": {
 "link": "END",
 "offset": Vector2(9360, -1660),
 "signalValue": "DIE3"
+},
+"3_60": {
+"link": &"1_56",
+"offset": Vector2(9640, -840),
+"signalValue": "MUS15"
 },
 "3_7": {
 "link": "END",
