@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvuq6l8glgp1h" path="res://scenes/dead_screen.tscn" id="4_8uibw"]
 [ext_resource type="Script" path="res://scripts/dead_screen.gd" id="5_jcn4o"]
 [ext_resource type="PackedScene" uid="uid://hhm0f2nhdcni" path="res://scenes/text_field.tscn" id="6_l6nbq"]
-[ext_resource type="AudioStream" uid="uid://dn7xjagvbbcfa" path="res://assets/Sounds/BadEndingTheme.ogg" id="8_kgaso"]
+[ext_resource type="AudioStream" path="res://assets/Sounds/BadEndingTheme.ogg" id="8_kgaso"]
 
 [sub_resource type="GDScript" id="GDScript_f8n6j"]
 script/source = "extends Control
