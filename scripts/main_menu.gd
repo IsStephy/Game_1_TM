@@ -20,13 +20,12 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if input_locked:
 		return
-
 	if event.is_action_pressed("ui_cancel"):
 		is_menu = !is_menu
 	update_menu_visibility()
 
 func update_menu_visibility():
-	print("update_menu_visibility: is_menu =", is_menu)  # Debug output.
+	print("update_menu_visibility: is_menu =", is_menu)
 	if is_menu:
 		exit_but.show()
 		continue_but.show()
@@ -62,10 +61,41 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_load_button_pressed() -> void:
-	pass 
+	if FileAccess.file_exists("user://savegame.json"):
+		var file = FileAccess.open("user://savegame.json", FileAccess.READ)
+		var data_string = file.get_as_text()
+		file.close()
+		var json = JSON.new()
+		var error = json.parse(data_string)
+		var save_data = json.data
+		if typeof(save_data) == TYPE_DICTIONARY:
+			var dialogue_box = get_node("../TextField/DialogueBox")
+			var dialogue_parser = dialogue_box._dialogue_parser
+			dialogue_parser.load_save_data(save_data)
+			print("Game loaded!")
+		else:
+			print("Error: Save file is corrupted.")
+	else:
+		print("No save file found.")
+
+
 
 func _on_save_button_pressed() -> void:
-	pass 
+	var dialogue_box = get_node("../TextField/DialogueBox") 
+	var dialogue_parser = dialogue_box._dialogue_parser
+	var save_data = dialogue_parser.get_save_data()
+
+	var file = FileAccess.open("user://savegame.json", FileAccess.WRITE)
+	if file:
+		var json = JSON.new()
+		var json_string = json.stringify(save_data)
+		file.store_string(json_string)
+		file.close()
+		print("Game saved!")
+	else:
+		print("Error: Could not open save file for writing.")
+
+
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
