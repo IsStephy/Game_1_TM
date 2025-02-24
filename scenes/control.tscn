@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg338d367g2mh"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_o63a4"]
+[ext_resource type="PackedScene" uid="uid://dmntcrv8d3sfb" path="res://scenes/main_menu.tscn" id="2_iexcb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_o63a4")
+
+[node name="Main_Menu" parent="." instance=ExtResource("2_iexcb")]
+layout_mode = 1
+offset_right = 1248.0
+offset_bottom = 744.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -3
