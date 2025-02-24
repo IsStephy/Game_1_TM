@@ -392,6 +392,7 @@ func _on_option_selected(idx : int):
 @onready var label = $"../../dead_screen/Label"
 @onready var color = $"../../dead_screen/ColorRect"
 @onready var texture = $"../../Sprite2D"
+@onready var audio = $"../../AudioStreamPlayer2D"
 
 func _on_dialogue_signal(value: String):
 	if value == "DIE0":
@@ -500,6 +501,8 @@ func _on_dialogue_signal(value: String):
 		
 	var new_background_path
 	var new_texture
+	var new_background_music_path
+	var new_background_music
 	
 	if value == "BACK0":
 		new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
