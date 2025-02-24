@@ -23,6 +23,7 @@ signal variable_changed(variable_name : String, value)
 signal dialogue_ended
 
 
+
 @export_group('Data')
 ## Contains the [param DialogueData] resource created using the Dialogue Nodes editor.
 @export var data : DialogueData :
@@ -155,6 +156,8 @@ var _dialogue_parser : DialogueParser
 var _main_container : BoxContainer
 var _sub_container : BoxContainer
 var _wait_effect : RichTextWait
+var portrait_override_active = false
+var portrait_override_texture : Texture2D = null
 
 
 func _enter_tree():
@@ -332,7 +335,8 @@ func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[S
 	if speaker is Character:
 		speaker_label.text = speaker.name
 		speaker_label.modulate = speaker.color
-		portrait.texture = speaker.image
+		if not portrait_override_active:
+			portrait.texture = speaker.image
 		portrait.show()
 		#if not speaker.image:
 		#	portrait.hide()
@@ -489,7 +493,10 @@ func _on_dialogue_signal(value: String):
 		self.hide()
 		portrait.hide()
 	if value == "CHAR0":
-		portrait.texture = load("res://assets/broski/bro_monstertruck.png")
+		portrait_override_texture = load("res://assets/broski/bro_monstertruck.png")
+		portrait.texture = portrait_override_texture
+		portrait_override_active = true
+
 		
 	var new_background_path
 	var new_texture
