@@ -11,10 +11,11 @@ var is_menu
 var input_locked = false
 
 func _ready() -> void:
+	print(self.get_parent())
 	if self.get_parent() == $Window:
-		is_menu = true
-	else:
 		is_menu = false
+	else:
+		is_menu = true
 	update_menu_visibility()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -25,7 +26,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	update_menu_visibility()
 
 func update_menu_visibility():
-	print("update_menu_visibility: is_menu =", is_menu)
 	if is_menu:
 		exit_but.show()
 		continue_but.show()
