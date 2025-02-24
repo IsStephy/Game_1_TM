@@ -488,6 +488,9 @@ func _on_dialogue_signal(value: String):
 		label["theme_override_colors/font_color"] = Color.YELLOW
 		self.hide()
 		portrait.hide()
+	if value == "CHAR0":
+		portrait.texture = load("res://assets/broski/bro_monstertruck.png")
+		
 	var new_background_path
 	var new_texture
 	
@@ -554,12 +557,11 @@ func _on_dialogue_signal(value: String):
 	elif value == "BACK23":
 		new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
 		new_background_path = "res://assets/scenes/grma/kitchen_idle.png"
-	texture.texture = new_texture
+	if value.begins_with("BACK"):
+		texture.texture = new_texture
 	if new_background_path:
 		_dialogue_parser.background = new_background_path
-	if value == "CHAR0":
-		var new_portrait = preload("res://assets/broski/bro_monstertruck.png")
-		portrait.texture = new_portrait
+
 		
 	
 func _on_variable_changed(variable_name : String, value):
