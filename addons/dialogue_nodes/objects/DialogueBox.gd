@@ -491,6 +491,7 @@ func _on_dialogue_signal(value: String):
 	var new_background_path
 	var new_texture
 	
+<<<<<<< HEAD
 	if value == "BACK0":
 		new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
 		new_background_path = "res://assets/scenes/bro/bro_room_day.png"
@@ -557,6 +558,78 @@ func _on_dialogue_signal(value: String):
 	texture.texture = new_texture
 	if new_background_path:
 		_dialogue_parser.background = new_background_path
+=======
+	if value == "CHAR0":
+		var new_portrait = preload("res://assets/broski/bro_monstertruck.png")
+		portrait.texture = new_portrait
+		
+	
+	
+	if value ==  "BACK0":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK1":
+		var new_texture = preload("res://assets/scenes/dad/dad_room_idle.png")
+		texture.texture = new_texture
+	if value ==  "BACK2":
+		var new_texture = preload("res://assets/scenes/dad/dad_pc_view1.png")
+		texture.texture = new_texture
+	if value ==  "BACK3":
+		var new_texture = preload("res://assets/scenes/dad/dad_pc_view2.png")
+		texture.texture = new_texture
+	if value ==  "BACK4":
+		var new_texture = preload("res://assets/scenes/dad/dad_room_icon.png")
+		texture.texture = new_texture
+	if value ==  "BACK5":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_full.png")
+		texture.texture = new_texture
+	if value ==  "BACK6":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_table_idle1.png")
+		texture.texture = new_texture
+	if value ==  "BACK7":
+		var new_texture = preload("res://assets/scenes/sis/sis_room_money.png")
+		texture.texture = new_texture
+	if value ==  "BACK8":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK9":
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_closed.png")
+		texture.texture = new_texture
+	if value ==  "BACK10":
+		var new_texture = preload("res://assets/scenes/new/sis_room/sis_room_meh.png")
+		texture.texture = new_texture
+	if value ==  "BACK11":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK12":
+		var new_texture = preload("res://assets/scenes/mum/bedroom.png")
+		texture.texture = new_texture
+	if value ==  "BACK14":
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_open.png")
+		texture.texture = new_texture
+	if value ==  "BACK15":
+		var new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_closed.png")
+		texture.texture = new_texture
+	if value ==  "BACK16":
+		var new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
+		texture.texture = new_texture
+	if value ==  "BACK17":
+		var new_texture = preload("res://assets/scenes/grma/kitchen_plate.png")
+		texture.texture = new_texture
+	if value ==  "BACK18":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
+		texture.texture = new_texture
+	if value ==  "BACK19":
+		var new_texture = preload("res://assets/scenes/final/coridor.png")
+		texture.texture = new_texture
+	if value ==  "BACK22":
+		var new_texture = preload("res://assets/scenes/bro/bro_room_night.png")
+		texture.texture = new_texture
+	if value ==  "BACK23":
+		var new_texture = preload("res://assets/scenes/grma/kitchen_idle.png")
+		texture.texture = new_texture
+	
+>>>>>>> df2acfd91441c760022969013e302d9761ea3e6d
 
 func _on_variable_changed(variable_name : String, value):
 	variable_changed.emit(variable_name, value)
