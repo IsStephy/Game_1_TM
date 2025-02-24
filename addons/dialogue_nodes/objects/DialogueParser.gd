@@ -46,9 +46,12 @@ var variables : Dictionary
 ## Contains all the [param Character] resources loaded from the path in the [member data].
 var characters : Array[Character]
 
+@onready var texture = $"../../../Sprite2D"
 var _running := false
 var _option_links := []
 var current_node_name: String = ""
+var background: String = ""
+var last_choice_background: String = ""
 
 ## Loads the [param DialogueData] resource from the given [param path]. The loaded resource can be accessed using [member data].
 func load_data(path : String):
@@ -119,7 +122,8 @@ func _proceed(node_name : String):
 func get_save_data() -> Dictionary:
 	return {
 		"current_node_name": current_node_name,
-		"variables": variables
+		"variables": variables,
+		"current_background": last_choice_background
 	}
 	
 func load_save_data(save_data: Dictionary) -> void:
@@ -127,6 +131,8 @@ func load_save_data(save_data: Dictionary) -> void:
 		current_node_name = save_data["current_node_name"]
 	if save_data.has("variables"):
 		variables = save_data["variables"]
+	if save_data.has("current_background"):
+		texture.texture = load(save_data["current_background"])
 	_running = true
 	_proceed(current_node_name)
 
