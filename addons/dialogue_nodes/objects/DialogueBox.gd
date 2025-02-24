@@ -485,6 +485,11 @@ func _on_dialogue_signal(value: String):
 		self.hide()
 		portrait.hide()
 	
+	if value == "CHAR0":
+		var new_portrait = preload("res://assets/broski/bro_monstertruck.png")
+		portrait.texture = new_portrait
+		
+	
 	
 	if value ==  "BACK0":
 		var new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
