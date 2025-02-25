@@ -363,6 +363,7 @@ func _on_dialogue_processed(speaker: Variant, dialogue: String, options: Array[S
 			break
 	
 	_dialogue_parser.last_choice_background = _dialogue_parser.background
+	_dialogue_parser.last_sound = _dialogue_parser.sound
 
 	
 	if options.size() == 0 or options.size() == 1:
@@ -641,12 +642,15 @@ func _on_dialogue_signal(value: String):
 		audio.stream = load("res://assets/Sounds/sounds/door-knocking.ogg")
 		audio.play()
 	if value.begins_with("END"):
+		new_background_music_path ="res://assets/Sounds/sounds/GoodEndingTheme.ogg"
 		audio.stream = load("res://assets/Sounds/sounds/GoodEndingTheme.ogg")
 		audio.play()
 	if value.begins_with("DIE"):
+		new_background_music_path ="res://assets/Sounds/sounds/BadEndingTheme.ogg"
 		audio.stream = load("res://assets/Sounds/sounds/BadEndingTheme.ogg")
 		audio.play()
-		
+	if new_background_music_path:
+		_dialogue_parser.sound = new_background_music_path
 		
 		
 	

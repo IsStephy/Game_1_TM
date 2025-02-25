@@ -87,14 +87,13 @@ func _on_save_button_pressed() -> void:
 		print("Game has not started yet!")
 		return
 	
-	is_menu = false
+	
 	is_load_screen = false
 	save_rect.show()
 	load_rect.hide()
 	print("Choose a save slot.")
 
 func _on_load_button_pressed() -> void:
-	is_menu = false
 	game_started = true
 	is_load_screen = true
 	load_rect.show()
@@ -120,7 +119,8 @@ func _on_save_slot_pressed(slot_index: int) -> void:
 		file.store_string(json_string)
 		file.close()
 		print("Game saved in slot " + str(slot_index) + "!")
-
+		is_menu = false
+		update_menu_visibility()
 		set_slot_background(save_slots[slot_index - 1], save_data["current_background"])
 		set_slot_background(load_slots[slot_index - 1], save_data["current_background"]) 
 	else:
@@ -150,6 +150,8 @@ func _on_load_slot_pressed(slot_index: int) -> void:
 			self.mouse_filter = Control.MOUSE_FILTER_STOP 
 			if save_data.has("current_background"):
 				texture.texture = load(save_data["current_background"])
+			is_menu = false
+			update_menu_visibility()
 		else:
 			print("Error: Could not load save data.")
 	else:

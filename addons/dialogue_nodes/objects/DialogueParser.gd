@@ -138,6 +138,7 @@ func load_save_data(save_data: Dictionary) -> void:
 		texture.texture = load(save_data["current_background"])
 	if save_data.has("current_background"):
 		audio.stream = load(save_data["current_sound"])
+		print("save sound"+save_data["current_sound"])
 		audio.play()
 	_running = true
 	_proceed(current_node_name)
