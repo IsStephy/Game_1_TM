@@ -56,14 +56,7 @@ func _on_start_button_pressed() -> void:
 
 
 func _on_load_button_pressed() -> void:
-	var dialoguebox = get_tree().get_root().find_node("DialogueBox", true, false)
-	if dialoguebox:
-		dialoguebox.start("1")
-		await(get_tree().create_timer(10))
-	else:
-		print("DialogueBox not found!")
-		return
-
+	is_menu = false
 	if FileAccess.file_exists("user://savegame.json"):
 		var file = FileAccess.open("user://savegame.json", FileAccess.READ)
 		var data_string = file.get_as_text()
@@ -71,20 +64,22 @@ func _on_load_button_pressed() -> void:
 		var json = JSON.new()
 		var error = json.parse(data_string)
 		var save_data = json.data
-		if dialoguebox._dialogue_parser:
-			dialoguebox._dialogue_parser.load_save_data(save_data)
+		if typeof(save_data) == TYPE_DICTIONARY:
+			var dialogue_box = get_node("../TextField/DialogueBox")
+			var dialogue_parser = dialogue_box._dialogue_parser
+			dialogue_parser.load_save_data(save_data)
 			print("Game loaded!")
 		else:
-			print("DialogueParser is not ready!")		
+			print("Error: Save file is corrupted.")
 	else:
 		print("No save file found.")
 
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/background1.tscn")
 
 
 
 
 func _on_save_button_pressed() -> void:
+	is_menu = false
 	var dialogue_box = get_node("../TextField/DialogueBox") 
 	var dialogue_parser = dialogue_box._dialogue_parser
 	var save_data = dialogue_parser.get_save_data()

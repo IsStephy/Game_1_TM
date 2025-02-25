@@ -501,8 +501,7 @@ func _on_dialogue_signal(value: String):
 		
 	var new_background_path
 	var new_texture
-	var new_background_music_path
-	var new_background_music
+	
 	
 	if value == "BACK0":
 		new_texture = preload("res://assets/scenes/bro/bro_room_day.png")
@@ -571,7 +570,13 @@ func _on_dialogue_signal(value: String):
 		texture.texture = new_texture
 	if new_background_path:
 		_dialogue_parser.background = new_background_path
-
+	
+	var new_background_music_path
+	var new_background_music
+	
+	#if value == "MUS0":
+		#new_background_music_path = "res://assets/Sounds/sounds/sitting_on_bed.ogg"
+		#audio.set_stream = preload("res://assets/Sounds/sounds/sitting_on_bed.ogg")
 		
 	
 func _on_variable_changed(variable_name : String, value):
