@@ -47,12 +47,14 @@ var variables : Dictionary
 var characters : Array[Character]
 
 @onready var texture = $"../../../Sprite2D"
+@onready var audio = $"../../../AudioStreamPlayer2D"
 var _running := false
 var _option_links := []
 var current_node_name: String = ""
 var background: String = ""
 var last_choice_background: String = ""
-
+var last_sound: String = ""
+var sound: String = ""
 ## Loads the [param DialogueData] resource from the given [param path]. The loaded resource can be accessed using [member data].
 func load_data(path : String):
 	if not path.ends_with('.tres'): return
@@ -123,7 +125,8 @@ func get_save_data() -> Dictionary:
 	return {
 		"current_node_name": current_node_name,
 		"variables": variables,
-		"current_background": last_choice_background
+		"current_background": last_choice_background,
+		"current_sound": last_sound
 	}
 	
 func load_save_data(save_data: Dictionary) -> void:
@@ -133,6 +136,9 @@ func load_save_data(save_data: Dictionary) -> void:
 		variables = save_data["variables"]
 	if save_data.has("current_background"):
 		texture.texture = load(save_data["current_background"])
+	if save_data.has("current_background"):
+		audio.stream = load(save_data["current_sound"])
+		audio.play()
 	_running = true
 	_proceed(current_node_name)
 

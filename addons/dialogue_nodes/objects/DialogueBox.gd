@@ -263,18 +263,17 @@ func _process(delta):
 @onready var main_menu = $"../../Main_Menu" 
 
 func _input(event):
-	if main_menu and main_menu.is_menu:
-		return  
-	if not is_running():
-		return
-	if options_container.visible and options_container.get_child_count() > 0:
-		return  
-	if get_viewport().gui_get_focus_owner():
-		return  
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and wait_for_input_continue:
-		_continue_dialogue()
-	elif event is InputEventKey and event.pressed and event.get_keycode() == KEY_SPACE and wait_for_input_continue:
-		_continue_dialogue()
+	if is_running() and not main_menu.is_menu:
+		if wait_for_input_continue:
+			if event is InputEventMouseButton and event.button_index == 1 and event.pressed:
+				_continue_dialogue()
+			elif event is InputEventKey and event.pressed and (event.get_keycode() == KEY_SPACE):
+				_continue_dialogue()
+		elif Input.is_action_just_pressed(skip_input_action):
+			if _wait_effect and not _wait_effect.skip:
+				_wait_effect.skip = true
+				await get_tree().process_frame
+				_on_wait_finished()
 
 
 
