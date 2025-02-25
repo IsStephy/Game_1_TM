@@ -13,7 +13,7 @@ extends Control
 @onready var save_rect = $"../SaveRect"
 @onready var save_slots = [
 	$"../SaveRect/Save1", $"../SaveRect/Save2", $"../SaveRect/Save3", 
-	$"../SaveRect/Save4", $"../SaveRect/Save5", $"../SaveRect/Save5",
+	$"../SaveRect/Save4", $"../SaveRect/Save5", $"../SaveRect/Save6",
 	$"../SaveRect/Save7", $"../SaveRect/Save8", $"../SaveRect/Save9"
 ]
 @onready var load_rect = $"../LoadRect"
@@ -31,14 +31,15 @@ var input_locked = false
 
 func _ready() -> void:
 	is_menu = true  
-	save_rect.hide()  # Hide save slots
+	save_rect.hide()  
 	load_rect.hide()
 	update_menu_visibility()
+	update_slot_backgrounds()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if input_locked:
 		return
-	if event.is_action_pressed("ui_cancel") and game_started and not is_load_screen:
+	if event.is_action_pressed("ui_cancel") and game_started:
 		is_menu = !is_menu
 		update_menu_visibility()
 
@@ -58,8 +59,8 @@ func update_menu_visibility():
 		save_but.hide()
 		load_but.hide()
 		color.hide()
-		save_rect.hide()  # Hide save slots when menu is closed
-		load_rect.hide()  # Hide load slots when menu is closed
+		save_rect.hide()
+		load_rect.hide()
 		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_continue_button_pressed() -> void:
@@ -81,7 +82,6 @@ func _on_start_button_pressed() -> void:
 	else:
 		print("Error: Game scene does not have start_game() function!")
 
-# 🟢 SHOW SAVE SLOTS
 func _on_save_button_pressed() -> void:
 	if not game_started:
 		print("Game has not started yet!")
@@ -89,20 +89,18 @@ func _on_save_button_pressed() -> void:
 	
 	is_menu = false
 	is_load_screen = false
-	save_rect.show()  # Show save slots only
-	load_rect.hide()  # Hide load slots
+	save_rect.show()
+	load_rect.hide()
 	print("Choose a save slot.")
 
-# 🟢 SHOW LOAD SLOTS
 func _on_load_button_pressed() -> void:
 	is_menu = false
 	game_started = true
 	is_load_screen = true
-	load_rect.show()  # Show load slots only
-	save_rect.hide()  # Hide save slots
+	load_rect.show()
+	save_rect.hide()
 	print("Choose a slot to load.")
 
-# 🔵 SAVE GAME TO SELECTED SLOT
 func _on_save_slot_pressed(slot_index: int) -> void:
 	if not game_started:
 		print("Game has not started yet!")
@@ -112,6 +110,9 @@ func _on_save_slot_pressed(slot_index: int) -> void:
 	var dialogue_parser = dialogue_box._dialogue_parser
 	var save_data = dialogue_parser.get_save_data()
 
+	if texture.texture:
+		save_data["current_background"] = texture.texture.resource_path
+
 	var file = FileAccess.open(save_file, FileAccess.WRITE)
 	if file:
 		var json = JSON.new()
@@ -119,12 +120,14 @@ func _on_save_slot_pressed(slot_index: int) -> void:
 		file.store_string(json_string)
 		file.close()
 		print("Game saved in slot " + str(slot_index) + "!")
+
+		set_slot_background(save_slots[slot_index - 1], save_data["current_background"])
+		set_slot_background(load_slots[slot_index - 1], save_data["current_background"]) 
 	else:
 		print("Error: Could not save to slot " + str(slot_index) + ".")
 
-	save_rect.hide()  # Hide Save slots after saving
+	save_rect.hide()
 
-# 🔵 LOAD GAME FROM SELECTED SLOT
 func _on_load_slot_pressed(slot_index: int) -> void:
 	var save_file = "user://savegame" + str(slot_index) + ".json"
 	if FileAccess.file_exists(save_file):
@@ -141,12 +144,41 @@ func _on_load_slot_pressed(slot_index: int) -> void:
 		if dialogue_box.has_method("load_game") and game_started:
 			dialogue_box.load_game(save_data)
 			print("Game loaded from slot " + str(slot_index) + "!")
+
+			game_started = true
+			is_menu = false
+			self.mouse_filter = Control.MOUSE_FILTER_STOP 
+			if save_data.has("current_background"):
+				texture.texture = load(save_data["current_background"])
 		else:
 			print("Error: Could not load save data.")
 	else:
 		print("No save file found in slot " + str(slot_index) + ".")
 
 	load_rect.hide()
+
+func update_slot_backgrounds():
+	for i in range(1, len(save_slots) + 1):
+		var save_file = "user://savegame" + str(i) + ".json"
+		if FileAccess.file_exists(save_file):
+			var file = FileAccess.open(save_file, FileAccess.READ)
+			var data_string = file.get_as_text()
+			file.close()
+
+			var json = JSON.new()
+			var error = json.parse(data_string)
+			var save_data = json.data
+
+			if save_data.has("current_background"):
+				set_slot_background(save_slots[i - 1], save_data["current_background"])
+				set_slot_background(load_slots[i - 1], save_data["current_background"])
+
+func set_slot_background(slot_button: Button, image_path: String):
+	if image_path and FileAccess.file_exists(image_path):
+		var texture = load(image_path)
+		var style = StyleBoxTexture.new()
+		style.texture = texture
+		slot_button.add_theme_stylebox_override("normal", style)
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
