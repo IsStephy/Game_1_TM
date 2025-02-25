@@ -843,7 +843,7 @@ nodes = {
 }
 },
 "size": Vector2(300, 240),
-"speaker": -1
+"speaker": ""
 },
 "1_17": {
 "dialogue": "Wow, Suzie, what’s that smell?!",
@@ -2245,7 +2245,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_39": {
 "link": &"1_17",
-"offset": Vector2(2760, -840),
+"offset": Vector2(2740, -900),
 "signalValue": "MUS5"
 },
 "3_4": {
@@ -2385,7 +2385,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_64": {
 "link": &"1_43",
-"offset": Vector2(7483.36, -368.525),
+"offset": Vector2(7420, -380),
 "signalValue": "MUS16"
 },
 "3_65": {
