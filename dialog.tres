@@ -166,7 +166,7 @@ nodes = {
 "value1": "EP",
 "value2": "5"
 },
-"link": &"3_30",
+"link": "END",
 "text": "1. Try the Front Door"
 },
 1: {
@@ -175,7 +175,7 @@ nodes = {
 "value1": "PAR",
 "value2": "8"
 },
-"link": &"3_62",
+"link": "END",
 "text": "2. Jump Out the Window"
 },
 2: {
@@ -184,7 +184,7 @@ nodes = {
 "value1": "GI",
 "value2": "8"
 },
-"link": &"3_32",
+"link": "END",
 "text": "3. Hide in Your Room"
 },
 3: {
@@ -193,11 +193,11 @@ nodes = {
 "value1": "1",
 "value2": "1"
 },
-"link": &"3_31",
+"link": "END",
 "text": "4.FBI"
 }
 },
-"size": Vector2(300, 322),
+"size": Vector2(300, 326),
 "speaker": ""
 },
 "1_11": {
@@ -838,12 +838,12 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"1_17",
+"link": &"3_39",
 "text": ""
 }
 },
 "size": Vector2(300, 240),
-"speaker": ""
+"speaker": -1
 },
 "1_17": {
 "dialogue": "Wow, Suzie, what’s that smell?!",
@@ -851,7 +851,7 @@ nodes = {
 "options": {
 0: {
 "condition": {},
-"link": &"3_39",
+"link": &"1_18",
 "text": ""
 }
 },
@@ -1020,7 +1020,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_29",
+"link": &"3_66",
 "text": ""
 }
 },
@@ -1046,7 +1046,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_1",
+"link": &"3_63",
 "text": ""
 }
 },
@@ -1228,7 +1228,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_43",
+"link": &"3_64",
 "text": "1. Knock on the Door"
 },
 1: {
@@ -1460,7 +1460,7 @@ BOOM!
 "options": {
 0: {
 "condition": {},
-"link": &"1_59",
+"link": &"3_65",
 "text": ""
 }
 },
@@ -2209,7 +2209,7 @@ The round or square chair, without a back[/i]) in the window.)",
 "signalValue": "BACK19"
 },
 "3_32": {
-"link": &"3_57",
+"link": "END",
 "offset": Vector2(20040, -260),
 "signalValue": "BACK22"
 },
@@ -2241,11 +2241,11 @@ The round or square chair, without a back[/i]) in the window.)",
 "3_38": {
 "link": &"1_16",
 "offset": Vector2(2780, -1000),
-"signalValue": "MUS4"
+"signalValue": "MUS1"
 },
 "3_39": {
-"link": &"1_18",
-"offset": Vector2(2960, -820),
+"link": &"1_17",
+"offset": Vector2(2760, -840),
 "signalValue": "MUS5"
 },
 "3_4": {
@@ -2265,7 +2265,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_42": {
 "link": &"1_23",
-"offset": Vector2(4860, -580),
+"offset": Vector2(4860, -500),
 "signalValue": "MUS8"
 },
 "3_43": {
@@ -2300,7 +2300,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_49": {
 "link": &"1_28",
-"offset": Vector2(4860, -680),
+"offset": Vector2(4860, -640),
 "signalValue": "MUS11"
 },
 "3_5": {
@@ -2377,6 +2377,26 @@ The round or square chair, without a back[/i]) in the window.)",
 "link": &"1_144",
 "offset": Vector2(20000, -960),
 "signalValue": "BACK19"
+},
+"3_63": {
+"link": &"1_1",
+"offset": Vector2(-580, -800),
+"signalValue": "MUS3"
+},
+"3_64": {
+"link": &"1_43",
+"offset": Vector2(7483.36, -368.525),
+"signalValue": "MUS16"
+},
+"3_65": {
+"link": &"1_59",
+"offset": Vector2(10560, -820),
+"signalValue": "MUS12"
+},
+"3_66": {
+"link": &"1_29",
+"offset": Vector2(5140, -700),
+"signalValue": "MUS5"
 },
 "3_7": {
 "link": "END",

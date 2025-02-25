@@ -249,7 +249,6 @@ func get_dialogue_parser() -> DialogueParser:
 
 func _process(delta):
 	if not is_running(): return
-	print(variables["PAR"])
 	# scrolling for longer dialogues
 	var scroll_amt := 0.0
 	if options_vertical:
@@ -394,7 +393,7 @@ func _on_option_selected(idx : int):
 @onready var label = $"../../dead_screen/Label"
 @onready var color = $"../../dead_screen/ColorRect"
 @onready var texture = $"../../Sprite2D"
-@onready var audio = $"../../AudioStreamPlayer"
+@onready var audio = $"../../AudioStreamPlayer2D"
 
 func _on_dialogue_signal(value: String):
 	if value == "DIE0":
@@ -570,6 +569,7 @@ func _on_dialogue_signal(value: String):
 		new_background_path = "res://assets/scenes/grma/kitchen_idle.png"
 	if value.begins_with("BACK"):
 		texture.texture = new_texture
+		
 	if new_background_path:
 		_dialogue_parser.background = new_background_path
 	
@@ -580,6 +580,70 @@ func _on_dialogue_signal(value: String):
 		new_background_music_path = "res://assets/Sounds/sounds/sitting_on_bed.ogg"
 		audio.stream = load("res://assets/Sounds/sounds/sitting_on_bed.ogg")
 		audio.play()
+	if value == "MUS1":
+		new_background_music_path = "res://assets/Sounds/sounds/door.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/door.ogg")
+		audio.play()
+	if value == "MUS2":
+		new_background_music_path = "res://assets/Sounds/sounds/casino_sounds.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/casino_sounds.ogg")
+		audio.play()
+	if value == "MUS3":
+		new_background_music_path = "res://assets/Sounds/sounds/DadTheme.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/DadTheme.ogg")
+		audio.play()
+	if value == "MUS5":
+		new_background_music_path = "res://assets/Sounds/sounds/SuzieTheme.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/SuzieTheme.ogg")
+		audio.play()
+	if value == "MUS6":
+		new_background_music_path = "res://assets/Sounds/sounds/bubbling_suzie.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/bubbling_suzie.ogg")
+		audio.play()
+	if value == "MUS7":
+		new_background_music_path = "res://assets/Sounds/sounds/bubbling-liquid-noise-224920.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/bubbling-liquid-noise-224920.ogg")
+		audio.play()
+	if value == "MUS8":
+		new_background_music_path = "res://assets/Sounds/sounds/number_phone.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/number_phone.ogg")
+		audio.play()
+	if value == "MUS9":
+		new_background_music_path = "res://assets/Sounds/sounds/creepy_mommy_room_sounds.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/creepy_mommy_room_sounds.ogg")
+		audio.play()
+	if value == "MUS10":
+		new_background_music_path = "res://assets/Sounds/sounds/mad_monster_sounds.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/mad_monster_sounds.ogg")
+		audio.play()
+	if value == "MUS11":
+		new_background_music_path = "res://assets/Sounds/sounds/mixing_solution.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/mixing_solution.ogg")
+		audio.play()
+	if value == "MUS13":
+		new_background_music_path = "res://assets/Sounds/sounds/granny_laugh.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/granny_laugh.ogg")
+		audio.play()
+	if value == "MUS12":
+		new_background_music_path = "res://assets/Sounds/sounds/GrannyTheme.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/GrannyTheme.ogg")
+		audio.play()
+	if value == "MUS15":
+		new_background_music_path ="res://assets/Sounds/sounds/cooking-34405.ogg" 
+		audio.stream = load("res://assets/Sounds/sounds/cooking-34405.ogg")
+		audio.play()
+	if value == "MUS16":
+		new_background_music_path ="res://assets/Sounds/sounds/door-knocking.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/door-knocking.ogg")
+		audio.play()
+	if value.begins_with("END"):
+		audio.stream = load("res://assets/Sounds/sounds/GoodEndingTheme.ogg")
+		audio.play()
+	if value.begins_with("DIE"):
+		audio.stream = load("res://assets/Sounds/sounds/BadEndingTheme.ogg")
+		audio.play()
+		
+		
 		
 	
 func _on_variable_changed(variable_name : String, value):
