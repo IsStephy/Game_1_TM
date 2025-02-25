@@ -244,6 +244,8 @@ func _ready():
 	
 	hide()
 
+func get_dialogue_parser() -> DialogueParser:
+	return _dialogue_parser
 
 func _process(delta):
 	if not is_running(): return
@@ -587,7 +589,14 @@ func _on_variable_changed(variable_name : String, value):
 func _on_dialogue_ended():
 	if hide_on_dialogue_end: hide()
 	dialogue_ended.emit()
-
+	
+func load_game(save_data: Dictionary) -> void:
+	_dialogue_parser.load_save_data(save_data)
+	
+func save_game(save_data: Dictionary) -> void:
+	_dialogue_parser.load_save_data(save_data)
+	
+	
 
 func _on_wait_finished():
 	options_container.show()

@@ -46,6 +46,164 @@ script = SubResource("GDScript_f8n6j")
 
 [node name="Main_Menu" parent="CanvasLayer" instance=ExtResource("3_nsg7t")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer"]
+
+[node name="SaveRect" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 456.0
+offset_top = 48.0
+offset_right = 1210.0
+offset_bottom = 560.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/SaveRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 0.999992
+offset_right = 755.0
+offset_bottom = 517.0
+color = Color(1, 1, 1, 0.415686)
+
+[node name="Save1" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 46.0
+offset_top = 33.0
+offset_right = 234.0
+offset_bottom = 163.0
+
+[node name="Save2" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 280.0
+offset_top = 31.0
+offset_right = 468.0
+offset_bottom = 161.0
+
+[node name="Save3" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 520.0
+offset_top = 31.0
+offset_right = 708.0
+offset_bottom = 161.0
+
+[node name="Save4" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 51.0
+offset_top = 199.0
+offset_right = 239.0
+offset_bottom = 329.0
+
+[node name="Save5" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 286.0
+offset_top = 195.0
+offset_right = 474.0
+offset_bottom = 325.0
+
+[node name="Save6" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 520.0
+offset_top = 196.0
+offset_right = 708.0
+offset_bottom = 326.0
+
+[node name="Save7" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 53.0
+offset_top = 361.0
+offset_right = 241.0
+offset_bottom = 491.0
+
+[node name="Save8" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 287.0
+offset_top = 361.0
+offset_right = 475.0
+offset_bottom = 491.0
+
+[node name="Save9" type="Button" parent="CanvasLayer/SaveRect"]
+offset_left = 523.0
+offset_top = 366.0
+offset_right = 711.0
+offset_bottom = 496.0
+
+[node name="LoadRect" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 456.0
+offset_top = 48.0
+offset_right = 1210.0
+offset_bottom = 560.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/LoadRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 0.999992
+offset_right = 755.0
+offset_bottom = 517.0
+color = Color(1, 1, 1, 0.415686)
+
+[node name="Load1" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 46.0
+offset_top = 33.0
+offset_right = 234.0
+offset_bottom = 163.0
+
+[node name="Load2" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 280.0
+offset_top = 31.0
+offset_right = 468.0
+offset_bottom = 161.0
+
+[node name="Load3" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 520.0
+offset_top = 31.0
+offset_right = 708.0
+offset_bottom = 161.0
+
+[node name="Load4" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 51.0
+offset_top = 199.0
+offset_right = 239.0
+offset_bottom = 329.0
+
+[node name="Load5" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 286.0
+offset_top = 195.0
+offset_right = 474.0
+offset_bottom = 325.0
+
+[node name="Load6" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 520.0
+offset_top = 196.0
+offset_right = 708.0
+offset_bottom = 326.0
+
+[node name="Load7" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 53.0
+offset_top = 361.0
+offset_right = 241.0
+offset_bottom = 491.0
+
+[node name="Load8" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 287.0
+offset_top = 361.0
+offset_right = 475.0
+offset_bottom = 491.0
+
+[node name="Load9" type="Button" parent="CanvasLayer/LoadRect"]
+offset_left = 523.0
+offset_top = 366.0
+offset_right = 711.0
+offset_bottom = 496.0
+
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save1" to="CanvasLayer/Main_Menu" method="_on_save_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save2" to="CanvasLayer/Main_Menu" method="_on_save_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save3" to="CanvasLayer/Main_Menu" method="_on_save_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save4" to="CanvasLayer/Main_Menu" method="_on_save_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save5" to="CanvasLayer/Main_Menu" method="_on_save_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save6" to="CanvasLayer/Main_Menu" method="_on_save_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save7" to="CanvasLayer/Main_Menu" method="_on_save_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save8" to="CanvasLayer/Main_Menu" method="_on_save_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/SaveRect/Save9" to="CanvasLayer/Main_Menu" method="_on_save_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load1" to="CanvasLayer/Main_Menu" method="_on_load_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load2" to="CanvasLayer/Main_Menu" method="_on_load_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load3" to="CanvasLayer/Main_Menu" method="_on_load_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load4" to="CanvasLayer/Main_Menu" method="_on_load_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load5" to="CanvasLayer/Main_Menu" method="_on_load_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load6" to="CanvasLayer/Main_Menu" method="_on_load_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load7" to="CanvasLayer/Main_Menu" method="_on_load_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load8" to="CanvasLayer/Main_Menu" method="_on_load_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/LoadRect/Load9" to="CanvasLayer/Main_Menu" method="_on_load_9_pressed"]
