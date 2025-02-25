@@ -47,7 +47,7 @@ Like: You have {{COINS}} coins!",
 "text": "Nothing"
 }
 },
-"size": Vector2(300, 308),
+"size": Vector2(300, 322),
 "speaker": "Greg"
 },
 "1_3": {
@@ -93,7 +93,7 @@ Current value: {{COINS}}
 "text": "Bye"
 }
 },
-"size": Vector2(300, 275),
+"size": Vector2(300, 289),
 "speaker": "Greg"
 },
 "1_6": {
@@ -150,7 +150,7 @@ Current value: {{COINS}}
 "text": "Bye"
 }
 },
-"size": Vector2(300, 275),
+"size": Vector2(300, 289),
 "speaker": "Greg"
 },
 "4_1": {

@@ -238,7 +238,7 @@ func _process_condition(dict : Dictionary):
 
 # Checks the condition based on dict.value1, dict.value2 and dict.operator
 func _check_condition(dict : Dictionary):
-	var value1 = dict.value1
+	var value1 = "{{"+dict.value1+"}}"
 	var value2 = dict.value2
 	
 	# get variables if needed
@@ -272,6 +272,7 @@ func _check_condition(dict : Dictionary):
 		4: return value1 >= value2
 		5: return value1 <= value2
 		_: return false
+
 
 
 # Replaces all {{}} variables with their corresponding values in the value string.

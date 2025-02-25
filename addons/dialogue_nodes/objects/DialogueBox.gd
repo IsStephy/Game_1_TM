@@ -247,7 +247,7 @@ func _ready():
 
 func _process(delta):
 	if not is_running(): return
-	
+	print(variables["PAR"])
 	# scrolling for longer dialogues
 	var scroll_amt := 0.0
 	if options_vertical:
@@ -392,7 +392,7 @@ func _on_option_selected(idx : int):
 @onready var label = $"../../dead_screen/Label"
 @onready var color = $"../../dead_screen/ColorRect"
 @onready var texture = $"../../Sprite2D"
-@onready var audio = $"../../AudioStreamPlayer2D"
+@onready var audio = $"../../AudioStreamPlayer"
 
 func _on_dialogue_signal(value: String):
 	if value == "DIE0":
@@ -574,9 +574,10 @@ func _on_dialogue_signal(value: String):
 	var new_background_music_path
 	var new_background_music
 	
-	#if value == "MUS0":
-		#new_background_music_path = "res://assets/Sounds/sounds/sitting_on_bed.ogg"
-		#audio.set_stream = preload("res://assets/Sounds/sounds/sitting_on_bed.ogg")
+	if value == "MUS0":
+		new_background_music_path = "res://assets/Sounds/sounds/sitting_on_bed.ogg"
+		audio.stream = load("res://assets/Sounds/sounds/sitting_on_bed.ogg")
+		audio.play()
 		
 	
 func _on_variable_changed(variable_name : String, value):

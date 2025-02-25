@@ -54,7 +54,7 @@ nodes = {
 },
 "1_101": {
 "dialogue": "BOBIK, I really don’t remember..",
-"offset": Vector2(17180, -660),
+"offset": Vector2(17180, -1000),
 "options": {
 0: {
 "condition": {},
@@ -67,7 +67,7 @@ nodes = {
 },
 "1_102": {
 "dialogue": "You know what, let’s try another time. I guess it can wait",
-"offset": Vector2(17520, -660),
+"offset": Vector2(17520, -1000),
 "options": {
 0: {
 "condition": {},
@@ -80,7 +80,7 @@ nodes = {
 },
 "1_103": {
 "dialogue": "Anyway, my friend Lolik, uhm…Called me to… Find some sticks good for beating the krapiva",
-"offset": Vector2(17860, -660),
+"offset": Vector2(17860, -1000),
 "options": {
 0: {
 "condition": {},
@@ -93,7 +93,7 @@ nodes = {
 },
 "1_104": {
 "dialogue": "(You just hope that this excuse works.)",
-"offset": Vector2(18200, -660),
+"offset": Vector2(18200, -1000),
 "options": {
 0: {
 "condition": {},
@@ -106,7 +106,7 @@ nodes = {
 },
 "1_105": {
 "dialogue": "(Seems that GRANNY doesn’t say anything.)",
-"offset": Vector2(18540, -660),
+"offset": Vector2(18540, -1000),
 "options": {
 0: {
 "condition": {},
@@ -119,7 +119,7 @@ nodes = {
 },
 "1_106": {
 "dialogue": "(You seem to be free. For now.)",
-"offset": Vector2(18880, -660),
+"offset": Vector2(18880, -1000),
 "options": {
 0: {
 "condition": {},
@@ -132,7 +132,7 @@ nodes = {
 },
 "1_107": {
 "dialogue": "(Final Chapter: The Escape)",
-"offset": Vector2(19220, -660),
+"offset": Vector2(19220, -1000),
 "options": {
 0: {
 "condition": {},
@@ -145,11 +145,11 @@ nodes = {
 },
 "1_108": {
 "dialogue": "(You’ve seen enough. Time to leave.)",
-"offset": Vector2(19560, -660),
+"offset": Vector2(13560, 100),
 "options": {
 0: {
 "condition": {},
-"link": &"1_109",
+"link": &"1_124",
 "text": ""
 }
 },
@@ -158,22 +158,43 @@ nodes = {
 },
 "1_109": {
 "dialogue": "...",
-"offset": Vector2(19900, -660),
+"offset": Vector2(19560, -1100),
 "options": {
 0: {
-"condition": {},
+"condition": {
+"operator": 5,
+"value1": "EP",
+"value2": "5"
+},
 "link": &"3_30",
 "text": "1. Try the Front Door"
 },
 1: {
-"condition": {},
-"link": &"3_31",
+"condition": {
+"operator": 4,
+"value1": "PAR",
+"value2": "8"
+},
+"link": &"3_62",
 "text": "2. Jump Out the Window"
 },
 2: {
-"condition": {},
+"condition": {
+"operator": 4,
+"value1": "GI",
+"value2": "8"
+},
 "link": &"3_32",
 "text": "3. Hide in Your Room"
+},
+3: {
+"condition": {
+"operator": 0,
+"value1": "1",
+"value2": "1"
+},
+"link": &"3_31",
+"text": "4.FBI"
 }
 },
 "size": Vector2(300, 322),
@@ -259,11 +280,11 @@ nodes = {
 },
 "1_115": {
 "dialogue": "(You land on a very sharp garden gnome.)",
-"offset": Vector2(20240, -960),
+"offset": Vector2(21360, -900),
 "options": {
 0: {
 "condition": {},
-"link": &"3_9",
+"link": &"5_3",
 "text": ""
 }
 },
@@ -387,6 +408,114 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": 0
 },
+"1_124": {
+"dialogue": "(Before you leave, you think for some time, maybe take a weapon?)",
+"offset": Vector2(13900, 100),
+"options": {
+0: {
+"condition": {},
+"link": &"4_1",
+"text": "1. Choose nothing"
+},
+1: {
+"condition": {},
+"link": &"4_2",
+"text": "2. Choose bazooka"
+},
+2: {
+"condition": {},
+"link": &"4_5",
+"text": "3. Choose knife"
+},
+3: {
+"condition": {},
+"link": &"4_8",
+"text": "4. Choose bucket"
+}
+},
+"size": Vector2(300, 322),
+"speaker": ""
+},
+"1_125": {
+"dialogue": "(It seems that Bobik has some strong fists right here.)",
+"offset": Vector2(14820, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_126": {
+"dialogue": "(Hehe, time for the house to get BOOM! Wait… Where did you get taht)",
+"offset": Vector2(14820, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_127": {
+"dialogue": "(This is a family friendly game, don’t worry)",
+"offset": Vector2(14820, 360),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_128": {
+"dialogue": "(I heard a rumor that Robert Oppenheim is developing a bomb right now. It’s vital to have some protection, a bucket will do, I guess.)",
+"offset": Vector2(14820, 700),
+"options": {
+0: {
+"condition": {},
+"link": &"1_129",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_129": {
+"dialogue": "(what I can do next, Maybe change the outfit?)",
+"offset": Vector2(15300, 120),
+"options": {
+0: {
+"condition": {},
+"link": &"4_10",
+"text": "1. Don’t change"
+},
+1: {
+"condition": {},
+"link": &"4_11",
+"text": "2. Choose Drag Queen outfit"
+},
+2: {
+"condition": {},
+"link": &"4_14",
+"text": "3. Choose sister’s dress"
+},
+3: {
+"condition": {},
+"link": &"4_16",
+"text": "4. Choose comfy sport suit"
+}
+},
+"size": Vector2(300, 322),
+"speaker": ""
+},
 "1_13": {
 "dialogue": "A toothpick? Are you insane? Do you know what happens if I lose this bet?!",
 "offset": Vector2(1360, -460),
@@ -400,6 +529,166 @@ nodes = {
 "size": Vector2(300, 240),
 "speaker": 1
 },
+"1_130": {
+"dialogue": "(Oh, okay, no fancy outfit then…)",
+"offset": Vector2(16240, -340),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_131": {
+"dialogue": "(Bro, where are we going with this?)",
+"offset": Vector2(16240, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_132": {
+"dialogue": "(I think your neighbor saw you… Are they calling someone? )",
+"offset": Vector2(16240, 380),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_133": {
+"dialogue": "(Good choice, now you are a ninja!)",
+"offset": Vector2(16240, 740),
+"options": {
+0: {
+"condition": {},
+"link": &"1_134",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_134": {
+"dialogue": "(Now you can leave a message for four family, what do you think)",
+"offset": Vector2(16800, 120),
+"options": {
+0: {
+"condition": {},
+"link": &"4_19",
+"text": "1. Don’t leave anything"
+},
+1: {
+"condition": {},
+"link": &"4_20",
+"text": "2. Leave a poem"
+},
+2: {
+"condition": {},
+"link": &"4_22",
+"text": "3. Write a small message"
+},
+3: {
+"condition": {},
+"link": &"4_25",
+"text": "4. Write a farewell with a lipstick on the mirror"
+}
+},
+"size": Vector2(300, 322),
+"speaker": ""
+},
+"1_135": {
+"dialogue": "(Bobik is just going to get some milk, no more. Why leaving a message?)",
+"offset": Vector2(17620, -280),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_136": {
+"dialogue": "(Wow, what a beautiful poem, are you the new Mihai Eminescu?)",
+"offset": Vector2(17620, 60),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_137": {
+"dialogue": "(Short simple message. Hope you do not intend to commit suicide, do you?)",
+"offset": Vector2(17620, 400),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_138": {
+"dialogue": "(Are we playing Bloody Mary now?!)",
+"offset": Vector2(17620, 740),
+"options": {
+0: {
+"condition": {},
+"link": &"1_139",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_139": {
+"dialogue": "(Last Stop before tou go, maybe pack your backpack?)",
+"offset": Vector2(18040, 240),
+"options": {
+0: {
+"condition": {},
+"link": &"4_28",
+"text": "1. Don’t pack anything"
+},
+1: {
+"condition": {},
+"link": &"4_29",
+"text": "2. Take your minecraft torches and computer "
+},
+2: {
+"condition": {},
+"link": &"4_31",
+"text": "3. Take some water, clothes, food"
+},
+3: {
+"condition": {},
+"link": &"4_34",
+"text": "4. Take with you a small bedazzled purse "
+}
+},
+"size": Vector2(300, 322),
+"speaker": ""
+},
 "1_14": {
 "dialogue": "(He loses. The screen flashes ‘DEBT OWED: ONE (1) CHILD’)",
 "offset": Vector2(1700, -460),
@@ -407,6 +696,123 @@ nodes = {
 0: {
 "condition": {},
 "link": &"3_14",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_140": {
+"dialogue": "(I do not think that this is a good idea)",
+"offset": Vector2(18820, -320),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_141": {
+"dialogue": "(Touch some grass already, that’s no joke…)",
+"offset": Vector2(18840, 20),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_142": {
+"dialogue": "(It’s time to falsify your documents and migrate to Argentina!)",
+"offset": Vector2(18840, 360),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_143": {
+"dialogue": "(Man, Fashion Week was last month, calm down.)",
+"offset": Vector2(18840, 680),
+"options": {
+0: {
+"condition": {},
+"link": &"5_2",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_144": {
+"dialogue": "(Paranoia kills you. Going insane so quickly and so painful. You decide to jump out of the window.)",
+"offset": Vector2(20260, -960),
+"options": {
+0: {
+"condition": {},
+"link": &"1_115",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_145": {
+"dialogue": "(Your phone rings. It is FBI?????)",
+"offset": Vector2(20260, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_146",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_146": {
+"dialogue": "(Oh no, why? Why THEM? Why YOU?)",
+"offset": Vector2(20600, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_147",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_147": {
+"dialogue": "(You are afraid. You try to jump out of the window.)",
+"offset": Vector2(20940, -660),
+"options": {
+0: {
+"condition": {},
+"link": &"1_115",
+"text": ""
+}
+},
+"size": Vector2(300, 240),
+"speaker": ""
+},
+"1_148": {
+"dialogue": "(You land on a very sharp garden gnome, but you survived because you had the bucket)",
+"offset": Vector2(21840, -620),
+"options": {
+0: {
+"condition": {},
+"link": &"3_61",
 "text": ""
 }
 },
@@ -537,7 +943,7 @@ nodes = {
 "text": "3. Call the Cops on Her"
 }
 },
-"size": Vector2(300, 320),
+"size": Vector2(300, 323),
 "speaker": 2
 },
 "1_23": {
@@ -1784,7 +2190,7 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_29": {
 "link": &"1_107",
-"offset": Vector2(19100, -800),
+"offset": Vector2(19100, -1140),
 "signalValue": "BACK19"
 },
 "3_3": {
@@ -1795,12 +2201,12 @@ The round or square chair, without a back[/i]) in the window.)",
 "3_30": {
 "link": &"1_110",
 "offset": Vector2(20000, -1260),
-"signalValue": "BACK20"
+"signalValue": "BACK19"
 },
 "3_31": {
-"link": &"1_115",
-"offset": Vector2(20000, -960),
-"signalValue": "BACK21"
+"link": &"1_145",
+"offset": Vector2(20020, -660),
+"signalValue": "BACK19"
 },
 "3_32": {
 "link": &"3_57",
@@ -1962,6 +2368,16 @@ The round or square chair, without a back[/i]) in the window.)",
 "offset": Vector2(9640, -840),
 "signalValue": "MUS15"
 },
+"3_61": {
+"link": "END",
+"offset": Vector2(22120, -700),
+"signalValue": "END"
+},
+"3_62": {
+"link": &"1_144",
+"offset": Vector2(20000, -960),
+"signalValue": "BACK19"
+},
 "3_7": {
 "link": "END",
 "offset": Vector2(18200, -1560),
@@ -1974,10 +2390,311 @@ The round or square chair, without a back[/i]) in the window.)",
 },
 "3_9": {
 "link": "END",
-"offset": Vector2(20580, -960),
+"offset": Vector2(22120, -860),
 "signalValue": "DIE6"
+},
+"4_1": {
+"link": &"1_125",
+"offset": Vector2(14340, -180),
+"type": 1,
+"value": "2",
+"variable": "EP"
+},
+"4_10": {
+"link": &"1_130",
+"offset": Vector2(15780, -180),
+"type": 1,
+"value": "3",
+"variable": "EP"
+},
+"4_11": {
+"link": &"4_12",
+"offset": Vector2(15780, -60),
+"type": 1,
+"value": "1",
+"variable": "PAR"
+},
+"4_12": {
+"link": &"4_13",
+"offset": Vector2(15780, 40),
+"type": 1,
+"value": "3",
+"variable": "GI"
+},
+"4_13": {
+"link": &"1_131",
+"offset": Vector2(15780, 140),
+"type": 1,
+"value": "1",
+"variable": "EP"
+},
+"4_14": {
+"link": &"4_15",
+"offset": Vector2(15780, 260),
+"type": 1,
+"value": "2",
+"variable": "PAR"
+},
+"4_15": {
+"link": &"1_132",
+"offset": Vector2(15780, 360),
+"type": 1,
+"value": "2",
+"variable": "GI"
+},
+"4_16": {
+"link": &"4_17",
+"offset": Vector2(15780, 480),
+"type": 1,
+"value": "3",
+"variable": "PAR"
+},
+"4_17": {
+"link": &"4_18",
+"offset": Vector2(15780, 580),
+"type": 1,
+"value": "1",
+"variable": "GI"
+},
+"4_18": {
+"link": &"1_133",
+"offset": Vector2(15780, 680),
+"type": 1,
+"value": "2",
+"variable": "EP"
+},
+"4_19": {
+"link": &"1_135",
+"offset": Vector2(17220, -240),
+"type": 1,
+"value": "3",
+"variable": "EP"
+},
+"4_2": {
+"link": &"4_3",
+"offset": Vector2(14340, -40),
+"type": 1,
+"value": "3",
+"variable": "PAR"
+},
+"4_20": {
+"link": &"4_21",
+"offset": Vector2(17200, -80),
+"type": 1,
+"value": "2",
+"variable": "PAR"
+},
+"4_21": {
+"link": &"1_136",
+"offset": Vector2(17200, 20),
+"type": 1,
+"value": "2",
+"variable": "GI"
+},
+"4_22": {
+"link": &"4_23",
+"offset": Vector2(17200, 180),
+"type": 1,
+"value": "2",
+"variable": "PAR"
+},
+"4_23": {
+"link": &"4_24",
+"offset": Vector2(17200, 280),
+"type": 1,
+"value": "1",
+"variable": "GI"
+},
+"4_24": {
+"link": &"1_137",
+"offset": Vector2(17200, 380),
+"type": 1,
+"value": "2",
+"variable": "EP"
+},
+"4_25": {
+"link": &"4_26",
+"offset": Vector2(17200, 540),
+"type": 1,
+"value": "1",
+"variable": "PAR"
+},
+"4_26": {
+"link": &"4_27",
+"offset": Vector2(17200, 640),
+"type": 1,
+"value": "3",
+"variable": "GI"
+},
+"4_27": {
+"link": &"1_138",
+"offset": Vector2(17200, 740),
+"type": 1,
+"value": "1",
+"variable": "EP"
+},
+"4_28": {
+"link": &"1_140",
+"offset": Vector2(18440, -200),
+"type": 1,
+"value": "2",
+"variable": "EP"
+},
+"4_29": {
+"link": &"4_30",
+"offset": Vector2(18440, -40),
+"type": 1,
+"value": "1",
+"variable": "PAR"
+},
+"4_3": {
+"link": &"4_4",
+"offset": Vector2(14340, 40),
+"type": 1,
+"value": "3",
+"variable": "GI"
+},
+"4_30": {
+"link": &"1_141",
+"offset": Vector2(18440, 60),
+"type": 1,
+"value": "1",
+"variable": "GI"
+},
+"4_31": {
+"link": &"4_32",
+"offset": Vector2(18440, 220),
+"type": 1,
+"value": "3",
+"variable": "PAR"
+},
+"4_32": {
+"link": &"4_33",
+"offset": Vector2(18440, 320),
+"type": 1,
+"value": "3",
+"variable": "GI"
+},
+"4_33": {
+"link": &"1_142",
+"offset": Vector2(18440, 420),
+"type": 1,
+"value": "3",
+"variable": "EP"
+},
+"4_34": {
+"link": &"4_35",
+"offset": Vector2(18440, 580),
+"type": 1,
+"value": "1",
+"variable": "GI"
+},
+"4_35": {
+"link": &"1_143",
+"offset": Vector2(18440, 680),
+"type": 1,
+"value": "1",
+"variable": "EP"
+},
+"4_36": {
+"link": &"1_128",
+"offset": Vector2(14340, 720),
+"type": 0,
+"value": "1",
+"variable": "BUCK"
+},
+"4_4": {
+"link": &"1_126",
+"offset": Vector2(14340, 120),
+"type": 1,
+"value": "1",
+"variable": "EP"
+},
+"4_5": {
+"link": &"4_6",
+"offset": Vector2(14340, 240),
+"type": 1,
+"value": "2",
+"variable": "PAR"
+},
+"4_6": {
+"link": &"4_7",
+"offset": Vector2(14340, 320),
+"type": 1,
+"value": "1",
+"variable": "GI"
+},
+"4_7": {
+"link": &"1_127",
+"offset": Vector2(14340, 400),
+"type": 1,
+"value": "3",
+"variable": "EP"
+},
+"4_8": {
+"link": &"4_9",
+"offset": Vector2(14340, 540),
+"type": 1,
+"value": "1",
+"variable": "PAR"
+},
+"4_9": {
+"link": &"4_36",
+"offset": Vector2(14340, 620),
+"type": 1,
+"value": "2",
+"variable": "GI"
+},
+"5_1": {
+"false": &"3_57",
+"offset": Vector2(19480, 260),
+"operator": 5,
+"true": &"3_30",
+"value1": "EP",
+"value2": "5"
+},
+"5_2": {
+"false": &"5_4",
+"offset": Vector2(19480, -220),
+"operator": 4,
+"true": &"3_62",
+"value1": "PAR",
+"value2": "8"
+},
+"5_3": {
+"false": &"3_9",
+"offset": Vector2(21740, -880),
+"operator": 4,
+"true": &"1_148",
+"value1": "BUCK",
+"value2": "1"
+},
+"5_4": {
+"false": &"5_1",
+"offset": Vector2(19480, 20),
+"operator": 4,
+"true": &"3_31",
+"value1": "GI",
+"value2": "8"
 }
 }
-variables = {}
-strays = Array[String]([])
+variables = {
+"BUCK": {
+"type": 3,
+"value": 0.0
+},
+"EP": {
+"type": 3,
+"value": 0.0
+},
+"GI": {
+"type": 3,
+"value": 0.0
+},
+"PAR": {
+"type": 3,
+"value": 0.0
+}
+}
+strays = Array[String](["3_32", "1_109"])
 characters = "res://Characters.tres"
