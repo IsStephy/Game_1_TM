@@ -8,20 +8,37 @@ extends Control
 @onready var color = $ColorRect
 @onready var dialogue_box = $"../TextField/DialogueBox"
 @onready var texture = $"../Sprite2D"
+
+# Separate Save & Load Rects
+@onready var save_rect = $"../SaveRect"
+@onready var save_slots = [
+	$"../SaveRect/Save1", $"../SaveRect/Save2", $"../SaveRect/Save3", 
+	$"../SaveRect/Save4", $"../SaveRect/Save5", $"../SaveRect/Save5",
+	$"../SaveRect/Save7", $"../SaveRect/Save8", $"../SaveRect/Save9"
+]
+@onready var load_rect = $"../LoadRect"
+@onready var load_slots = [
+	$"../LoadRect/Load1", $"../LoadRect/Load2", $"../LoadRect/Load3", 
+	$"../LoadRect/Load4", $"../LoadRect/Load5", $"../LoadRect/Load6",
+	$"../LoadRect/Load7", $"../LoadRect/Load8", $"../LoadRect/Load9"
+]
+
 var is_menu = true
-var game_started = false 
+var game_started = false
 var is_load_screen = false
 
 var input_locked = false
 
 func _ready() -> void:
 	is_menu = true  
+	save_rect.hide()  # Hide save slots
+	load_rect.hide()
 	update_menu_visibility()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if input_locked:
 		return
-	if event.is_action_pressed("ui_cancel") and game_started:
+	if event.is_action_pressed("ui_cancel") and game_started and not is_load_screen:
 		is_menu = !is_menu
 		update_menu_visibility()
 
@@ -41,6 +58,8 @@ func update_menu_visibility():
 		save_but.hide()
 		load_but.hide()
 		color.hide()
+		save_rect.hide()  # Hide save slots when menu is closed
+		load_rect.hide()  # Hide load slots when menu is closed
 		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_continue_button_pressed() -> void:
@@ -62,13 +81,54 @@ func _on_start_button_pressed() -> void:
 	else:
 		print("Error: Game scene does not have start_game() function!")
 
+# 🟢 SHOW SAVE SLOTS
+func _on_save_button_pressed() -> void:
+	if not game_started:
+		print("Game has not started yet!")
+		return
+	
+	is_menu = false
+	is_load_screen = false
+	save_rect.show()  # Show save slots only
+	load_rect.hide()  # Hide load slots
+	print("Choose a save slot.")
+
+# 🟢 SHOW LOAD SLOTS
 func _on_load_button_pressed() -> void:
 	is_menu = false
 	game_started = true
-	update_menu_visibility()
+	is_load_screen = true
+	load_rect.show()  # Show load slots only
+	save_rect.hide()  # Hide save slots
+	print("Choose a slot to load.")
 
-	if FileAccess.file_exists("user://savegame.json"):
-		var file = FileAccess.open("user://savegame.json", FileAccess.READ)
+# 🔵 SAVE GAME TO SELECTED SLOT
+func _on_save_slot_pressed(slot_index: int) -> void:
+	if not game_started:
+		print("Game has not started yet!")
+		return
+
+	var save_file = "user://savegame" + str(slot_index) + ".json"
+	var dialogue_parser = dialogue_box._dialogue_parser
+	var save_data = dialogue_parser.get_save_data()
+
+	var file = FileAccess.open(save_file, FileAccess.WRITE)
+	if file:
+		var json = JSON.new()
+		var json_string = json.stringify(save_data)
+		file.store_string(json_string)
+		file.close()
+		print("Game saved in slot " + str(slot_index) + "!")
+	else:
+		print("Error: Could not save to slot " + str(slot_index) + ".")
+
+	save_rect.hide()  # Hide Save slots after saving
+
+# 🔵 LOAD GAME FROM SELECTED SLOT
+func _on_load_slot_pressed(slot_index: int) -> void:
+	var save_file = "user://savegame" + str(slot_index) + ".json"
+	if FileAccess.file_exists(save_file):
+		var file = FileAccess.open(save_file, FileAccess.READ)
 		var data_string = file.get_as_text()
 		file.close()
 
@@ -80,26 +140,82 @@ func _on_load_button_pressed() -> void:
 		var game_scene = get_tree().current_scene
 		if dialogue_box.has_method("load_game") and game_started:
 			dialogue_box.load_game(save_data)
+			print("Game loaded from slot " + str(slot_index) + "!")
 		else:
-			print("Error: Game scene does not have load_game() function!")
-
-
-
-func _on_save_button_pressed() -> void:
-	is_menu = false
-	var dialogue_parser = dialogue_box._dialogue_parser
-	var save_data = dialogue_parser.get_save_data()
-
-	var file = FileAccess.open("user://savegame.json", FileAccess.WRITE)
-	if file and game_started:
-		var json = JSON.new()
-		var json_string = json.stringify(save_data)
-		file.store_string(json_string)
-		file.close()
-		print("Game saved!")
+			print("Error: Could not load save data.")
 	else:
-		print("Error: Could not open save file for writing.")
-		
+		print("No save file found in slot " + str(slot_index) + ".")
+
+	load_rect.hide()
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_save_1_pressed() -> void:
+	_on_save_slot_pressed(1)
+
+
+func _on_save_2_pressed() -> void:
+	_on_save_slot_pressed(2)
+
+
+func _on_save_3_pressed() -> void:
+	_on_save_slot_pressed(3)
+
+
+func _on_save_4_pressed() -> void:
+	_on_save_slot_pressed(4)
+
+
+func _on_save_5_pressed() -> void:
+	_on_save_slot_pressed(5)
+
+
+func _on_save_6_pressed() -> void:
+	_on_save_slot_pressed(6)
+
+
+func _on_save_7_pressed() -> void:
+	_on_save_slot_pressed(7)
+
+func _on_save_8_pressed() -> void:
+	_on_save_slot_pressed(8)
+
+
+func _on_save_9_pressed() -> void:
+	_on_save_slot_pressed(9)
+
+
+func _on_load_1_pressed() -> void:
+	_on_load_slot_pressed(1)
+
+
+func _on_load_2_pressed() -> void:
+	_on_load_slot_pressed(2)
+
+
+func _on_load_3_pressed() -> void:
+	_on_load_slot_pressed(3)
+
+
+func _on_load_4_pressed() -> void:
+	_on_load_slot_pressed(4)
+
+func _on_load_5_pressed() -> void:
+	_on_load_slot_pressed(5)
+
+func _on_load_6_pressed() -> void:
+	_on_load_slot_pressed(6)
+
+
+func _on_load_7_pressed() -> void:
+	_on_load_slot_pressed(7)
+
+
+func _on_load_8_pressed() -> void:
+	_on_load_slot_pressed(8)
+
+
+func _on_load_9_pressed() -> void:
+	_on_load_slot_pressed(9)
