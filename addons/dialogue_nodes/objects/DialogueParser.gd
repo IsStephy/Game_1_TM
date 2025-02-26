@@ -126,7 +126,7 @@ func get_save_data() -> Dictionary:
 		"current_node_name": current_node_name,
 		"variables": variables,
 		"current_background": last_choice_background,
-		"current_sound": last_sound
+		"current_sound": last_sound,
 	}
 	
 func load_save_data(save_data: Dictionary) -> void:
