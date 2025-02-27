@@ -33,7 +33,7 @@ var input_locked = false
 
 func _ready() -> void:
 	is_menu = true  
-	texture.texture = load("res://assets/scenes/new/cropped-finaly.png")
+	texture.texture = load("res://assets/cropped-finaly.png")
 	save_rect.hide()  
 	load_rect.hide()
 	update_menu_visibility()
@@ -74,6 +74,7 @@ func _on_continue_button_pressed() -> void:
 func _on_start_button_pressed() -> void:
 	label.hide()
 	colorrect.hide()
+	portrait.show()
 	is_menu = false
 	game_started = true 
 	update_menu_visibility()
