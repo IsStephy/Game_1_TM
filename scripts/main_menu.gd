@@ -31,6 +31,7 @@ var input_locked = false
 
 func _ready() -> void:
 	is_menu = true  
+	texture.texture = load("res://assets/finaly.png")
 	save_rect.hide()  
 	load_rect.hide()
 	update_menu_visibility()
