@@ -184,8 +184,8 @@ func update_slot_backgrounds():
 				set_slot_background(load_slots[i - 1], save_data["current_background"])
 
 func set_slot_background(slot_button: Button, image_path: String):
-	if image_path and FileAccess.file_exists(image_path):
-		var texture = load(image_path)
+	var texture = ResourceLoader.load(image_path)
+	if texture:
 		var style = StyleBoxTexture.new()
 		style.texture = texture
 		slot_button.add_theme_stylebox_override("normal", style)
