@@ -8,7 +8,9 @@ extends Control
 @onready var color = $ColorRect
 @onready var dialogue_box = $"../TextField/DialogueBox"
 @onready var texture = $"../Sprite2D"
-
+@onready var label = $"../dead_screen/Label"
+@onready var colorrect= $"../dead_screen/ColorRect"
+@onready var portrait = $"../TextField/PortraitVBox"
 # Separate Save & Load Rects
 @onready var save_rect = $"../SaveRect"
 @onready var save_slots = [
@@ -70,6 +72,8 @@ func _on_continue_button_pressed() -> void:
 		update_menu_visibility()
 
 func _on_start_button_pressed() -> void:
+	label.hide()
+	colorrect.hide()
 	is_menu = false
 	game_started = true 
 	update_menu_visibility()
@@ -153,6 +157,10 @@ func _on_load_slot_pressed(slot_index: int) -> void:
 				texture.texture = load(save_data["current_background"])
 			is_menu = false
 			update_menu_visibility()
+			label.hide()
+			colorrect.hide()
+			dialogue_box.show()
+			portrait.show()
 		else:
 			print("Error: Could not load save data.")
 	else:
