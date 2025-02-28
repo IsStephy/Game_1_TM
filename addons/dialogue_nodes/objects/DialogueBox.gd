@@ -290,6 +290,7 @@ func _call_continue():
 ## Starts processing the dialogue [member data], starting with the Start Node with its ID set to [param start_id].
 func start(id := start_id):
 	if not _dialogue_parser: return
+	portrait_override_active = false
 	_dialogue_parser.start(id)
 
 
@@ -663,6 +664,7 @@ func _on_dialogue_ended():
 	dialogue_ended.emit()
 	
 func load_game(save_data: Dictionary) -> void:
+	portrait_override_active = false
 	_dialogue_parser.load_save_data(save_data)
 	
 func save_game(save_data: Dictionary) -> void:
