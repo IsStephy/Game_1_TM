@@ -550,8 +550,8 @@ func _on_dialogue_signal(value: String):
 		new_texture = preload("res://assets/scenes/mum/bedroom.png")
 		new_background_path = "res://assets/scenes/mum/bedroom.png"
 	elif value == "BACK14":
-		new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_open.png")
-		new_background_path = "res://assets/scenes/new/mom_room/bedroom_door_open.png"
+		new_texture = preload("res://assets/scenes/shrex/bedroom_door_open_2.png")
+		new_background_path = "res://assets/scenes/shrex/bedroom_door_open_2.png"
 	elif value == "BACK15":
 		new_texture = preload("res://assets/scenes/new/mom_room/bedroom_door_closed.png")
 		new_background_path = "res://assets/scenes/new/mom_room/bedroom_door_closed.png"

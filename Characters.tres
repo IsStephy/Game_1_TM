@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=14 format=3 uid="uid://di21ijmfa2s22"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=15 format=3 uid="uid://di21ijmfa2s22"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_7hijy"]
 [ext_resource type="Texture2D" uid="uid://biqmh7fjuxnu0" path="res://assets/broski/bro_idle.png" id="2_vw5ia"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dhln64twxw6lo" path="res://assets/scenes/new/dad/dad_idle.png" id="3_rxa5u"]
 [ext_resource type="Texture2D" uid="uid://bknen6r0vpfbw" path="res://assets/sis/sis_idle.png" id="4_oxagn"]
 [ext_resource type="Texture2D" uid="uid://cdd5aqhpxn2x8" path="res://assets/scenes/new/mom/mom_idle.png" id="5_oe122"]
-[ext_resource type="Texture2D" uid="uid://xc2a7ufeo6w0" path="res://assets/scenes/new/monster/monstertruck.png" id="6_l7wtp"]
+[ext_resource type="Texture2D" uid="uid://dw73m1blvvs8q" path="res://assets/scenes/grma/granny-removebg-preview.png" id="6_x0j4n"]
+[ext_resource type="Texture2D" uid="uid://cqy85fx3uv17j" path="res://assets/scenes/shrex/monstertruck.png" id="7_mqodg"]
 
 [sub_resource type="Resource" id="1"]
 script = ExtResource("1_7hijy")
@@ -35,12 +36,13 @@ color = Color(0, 0.84595, 0.429763, 1)
 [sub_resource type="Resource" id="Resource_siu21"]
 script = ExtResource("1_7hijy")
 name = "GRANNY"
+image = ExtResource("6_x0j4n")
 color = Color(0.895054, 0.355317, 5.77569e-07, 1)
 
 [sub_resource type="Resource" id="Resource_3klgs"]
 script = ExtResource("1_7hijy")
 name = "CREATURE"
-image = ExtResource("6_l7wtp")
+image = ExtResource("7_mqodg")
 color = Color(0.131798, 0.614841, 1.92523e-07, 1)
 
 [resource]
