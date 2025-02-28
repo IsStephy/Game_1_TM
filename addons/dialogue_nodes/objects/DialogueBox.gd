@@ -500,6 +500,8 @@ func _on_dialogue_signal(value: String):
 		label["theme_override_colors/font_color"] = Color.YELLOW
 		self.hide()
 		portrait.hide()
+		await get_tree().create_timer(3.0).timeout
+		get_tree().change_scene_to_file("res://scenes/credits.tscn")
 	if value == "CHAR0":
 		portrait_override_texture = load("res://assets/broski/bro_monstertruck.png")
 		portrait.texture = portrait_override_texture

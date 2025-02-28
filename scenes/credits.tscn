@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://58ny8auuswgi"]
+
+[ext_resource type="Script" path="res://color_rect.gd" id="1_mfrk6"]
+
+[node name="ColorRect" type="ColorRect"]
+offset_right = 1351.0
+offset_bottom = 806.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_mfrk6")
+
+[node name="role" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 83.0
+offset_right = 916.0
+offset_bottom = 577.0
+bbcode_enabled = true
+text = "[center][b]Written and dirrected by [/b]
+Mr. Dizaster (Ciumacenco Pavel)
+
+[b]Design by[/b]
+Yanot (Bujor-Cobili Alexandra)
+
+Mr. Dizaster (Ciumacenco Pavel)
+danganhuh (Mihalevschi Alexandra)
+
+[b] Programmed by [/b]
+Dackohn (Pleșca Denis)
+Is_Stephy (Istrati Ștefan)
+
+[b]Composer[/b]
+danganhuh (Mihalevschi Alexandra)
+[/center]
+"
+text_direction = 1
